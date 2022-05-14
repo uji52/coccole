@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CoccoleFoot msg="Coccleへようこそ" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import CoccoleHead from './components/CoccoleHead.vue'
+//import CoccoleMain from './components/CoccoleMain.vue'
+import CoccoleFoot from './components/CoccoleFoot.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+//    CoccoleHead,
+//    CoccoleMain
+    CoccoleFoot
   }
 }
 </script>
