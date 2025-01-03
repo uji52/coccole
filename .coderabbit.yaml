@@ -7,15 +7,16 @@ reviews:
     review_status: true
     collapse_walkthrough: true
     path_filters:
-        - "!**/.xml"
+        - "!**/*.xml"
     path_instructions:
         - path: "**/*.js"
-          instructions: "Review the JavaScript code for conformity with the Google JavaScript style guide, highlighting any deviations."
+          instructions: |
+            Review the JavaScript code for conformity with the Google JavaScript style guide, highlighting any deviations.
         - path: "tests/**/*"
           instructions: |
-              "Assess the unit test code employing the Mocha testing framework. Confirm that:
+              Assess the unit test code employing the Mocha testing framework. Confirm that:
               - The tests adhere to Mocha's established best practices.
-              - Test descriptions are sufficiently detailed to clarify the purpose of each test."
+              - Test descriptions are sufficiently detailed to clarify the purpose of each test.
     auto_review:
         enabled: true
         ignore_title_keywords:
@@ -25,5 +26,9 @@ reviews:
         base_branches:
             - "develop"
             - "feature/.*"
+        exclude_branches:
+            - "master"
+            - "hotfix/.*"
+            - "release/.*"            
 chat:
     auto_reply: true
