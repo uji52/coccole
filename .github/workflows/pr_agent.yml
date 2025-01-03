@@ -18,3 +18,8 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.QODO_MERGE_GITHUB_TOKEN }}
+          pr_description.generate_ai_title: false
+          pr_description.extra_instructions: "(MUST)回答は日本語で記述してください。"
+          pr_reviewer.extra_instructions: "(MUST)回答は日本語で記述してください。"
+          pr_reviewer.require_score_review: true
+          
