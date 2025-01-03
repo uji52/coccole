@@ -26,9 +26,8 @@ reviews:
         base_branches:
             - "develop"
             - "feature/.*"
-        exclude_branches:
-            - "master"
-            - "hotfix/.*"
-            - "release/.*"            
+            - "!master"
+            - "!hotfix/.*"
+            - "!release/.*"
 chat:
     auto_reply: true
