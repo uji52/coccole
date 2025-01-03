@@ -29,6 +29,6 @@ reviews:
         exclude_branches:
             - "master"
             - "hotfix/.*"
-            - "release/.*"            
+            - "release/.*"
 chat:
     auto_reply: true
