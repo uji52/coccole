@@ -5,12 +5,12 @@ const glob = require('glob-all');
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
-  publicPath: "./",
+  publicPath: './',
   css: {
     loaderOptions: {
       scss: {
         additionalData:
-          `@import "@/assets/scss/common.scss"; \
+          '@import "@/assets/scss/common.scss"; \
            @import "@/assets/scss/blue.scss"; \
            @import "@/assets/scss/bootstrap"; \
            @import "@/assets/scss/_bootstrap-compass.scss"; \
@@ -20,7 +20,7 @@ module.exports = {
            @import "@/assets/scss/style2.scss"; \
            @import "@/assets/scss/style3.scss"; \
            @import "@/assets/scss/style4.scss"; \
-           @import "@/assets/scss/style.scss";`
+           @import "@/assets/scss/style.scss";'
       }
     },
   },
