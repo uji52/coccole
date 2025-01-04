@@ -1,4 +1,8 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require('path');
+const PurgeCSSPlugin = require('purgecss-webpack-plugin').PurgeCSSPlugin;
+const glob = require('glob-all');
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   publicPath: "./",
@@ -21,8 +25,38 @@ module.exports = {
     },
   },
   configureWebpack: config => {
+    config.plugins.push(
+      new PurgeCSSPlugin({
+        paths: glob.sync([
+          path.join(__dirname, './src/**/*.vue'),
+          path.join(__dirname, './public/index.html')
+        ]),
+        safelist: {
+          standard: [/^el-/], 
+        }
+      })
+    );
+    /*
+    config.plugins.push(
+      new CompressionWebpackPlugin({
+        filename: '[path].gz[query]',
+        algorithm: 'gzip',
+        test: /\.(js|css|html|svg)$/,
+        threshold: 10240,
+        minRatio: 0.8
+      })
+    );
+    */
     if (process.env.NODE_ENV === 'production' && process.env.ANALYZE) {
       config.plugins.push(new BundleAnalyzerPlugin());
     }
-  }
+  },
+  chainWebpack: config => {
+    config.module
+      .rule('images')
+      .use('image-webpack-loader')
+      .loader('image-webpack-loader')
+      .options({ bypassOnDebug: true })
+      .end()
+  },
 }
