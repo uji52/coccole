@@ -36,16 +36,15 @@ module.exports = {
         }
       })
     );
-    /*
     config.plugins.push(
       new CompressionWebpackPlugin({
-        filename: '[path].gz[query]',
+        filename: '[path][base].gz',
         algorithm: 'gzip',
         test: /\.(js|css|html|svg)$/,
         threshold: 10240,
         minRatio: 0.8
       })
-    );*/
+    );
     if (process.env.NODE_ENV === 'production' && process.env.ANALYZE) {
       config.plugins.push(new BundleAnalyzerPlugin());
     }
