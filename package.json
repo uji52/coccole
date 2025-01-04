@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "analyze": "ANALYZE=true vue-cli-service build",
     "local-deploy": "npm run build;rm -rf /var/www/html/test/*;cp -rp dist/* /var/www/html/test/",
-    "depcheck": "depcheck",
+    "depcheck": "depcheck --ignores=file-loader,url-loader,image-webpack-loader,@vue/cli-plugin-eslint",
     "lint": "vue-cli-service lint",
     "test:unit": "jest"
   },
