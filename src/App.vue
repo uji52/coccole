@@ -1,5 +1,5 @@
 <template>
-  <CoccoleFoot msg="Coccleへようこそ" />
+  <CoccoleFoot msg="Coccoleへようこそ" />
 </template>
 
 <script>
