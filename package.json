@@ -5,30 +5,40 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "analyze": "ANALYZE=true vue-cli-service build",
     "local-deploy": "npm run build;rm -rf /var/www/html/test/*;cp -rp dist/* /var/www/html/test/",
-    "lint": "vue-cli-service lint"
+    "depcheck": "depcheck --ignores=file-loader,url-loader,image-webpack-loader,@vue/cli-plugin-eslint",
+    "lint": "vue-cli-service lint",
+    "test:unit": "jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@vue/cli-service": "^5.0.8",
     "bootstrap": "^5.3.2",
-    "bootstrap-vue-3": "^0.1.13",
-    "core-js": "^3.33.0",
     "jquery": "^3.7.1",
+    "moment": "^2.30.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
-    "@babel/eslint-parser": "^7.22.15",
     "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-plugin-eslint": "~5.0.8",
-    "@vue/compiler-sfc": "^3.3.4",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/test-utils": "^2.4.6",
+    "compression-webpack-plugin": "^11.1.0",
+    "depcheck": "^1.4.7",
     "eslint": "^8.51.0",
-    "eslint-plugin-vue": "^9.17.0"
+    "eslint-plugin-vue": "^9.17.0",
+    "file-loader": "^6.2.0",
+    "glob-all": "^3.3.1",
+    "image-webpack-loader": "^8.1.0",
+    "jest": "^26.6.3",
+    "purgecss-webpack-plugin": "^7.0.2",
+    "url-loader": "^4.1.1",
+    "vue-jest": "^5.0.0-alpha.10",
+    "webpack-bundle-analyzer": "^4.10.2"
   },
   "eslintConfig": {
     "root": true,

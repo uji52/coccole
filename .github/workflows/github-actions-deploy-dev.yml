@@ -15,7 +15,18 @@ jobs:
         run: npm install
 
       - name: Lint
-        run: npm run lint  # Lint
+        run: npm run lint
+  UnitTest:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run test:unit
   DeployDevelop:
     runs-on: ubuntu-22.04
     steps:
