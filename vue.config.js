@@ -54,7 +54,24 @@ module.exports = {
       .rule('images')
       .use('image-webpack-loader')
       .loader('image-webpack-loader')
-      .options({ bypassOnDebug: true })
+      .options({
+        bypassOnDebug: true,
+        mozjpeg: {
+          progressive: true,
+          quality: 80
+        },
+        optipng: {
+          enabled: true,
+          optimizationLevel: 5
+        },
+        pngquant: {
+          quality: [0.65, 0.90],
+          speed: 4
+        },
+        webp: {
+          quality: 80
+        }
+      })
       .end()
   },
 }
