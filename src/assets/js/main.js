@@ -1,4 +1,4 @@
-;(function () {
+(function () {
 	
 	'use strict';
 
@@ -6,13 +6,13 @@
 
 	// iPad and iPod detection	
 	var isiPad = function(){
-		return (navigator.platform.indexOf("iPad") != -1);
+		return (navigator.platform.indexOf('iPad') != -1);
 	};
 
 	var isiPhone = function(){
 	    return (
-			(navigator.platform.indexOf("iPhone") != -1) || 
-			(navigator.platform.indexOf("iPod") != -1)
+			(navigator.platform.indexOf('iPhone') != -1) || 
+			(navigator.platform.indexOf('iPod') != -1)
 	    );
 	};
 
@@ -30,7 +30,7 @@
 	var sliderMain = function() {
 		
 	  	$('#fh5co-home .flexslider').flexslider({
-			animation: "fade",
+			animation: 'fade',
 			slideshowSpeed: 5000
 	  	});
 
@@ -43,7 +43,7 @@
 
 	var sliderSayings = function() {
 		$('#fh5co-sayings .flexslider').flexslider({
-			animation: "slide",
+			animation: 'slide',
 			slideshowSpeed: 5000,
 			directionNav: false,
 			controlNav: true,
@@ -86,7 +86,7 @@
 			    		'top' : 0,
 			    		'width' : '100%',
 			    		'z-index' : 99999
-			    	}).addClass('fh5co-shadow');;
+			    	}).addClass('fh5co-shadow');
 
 			}
 
