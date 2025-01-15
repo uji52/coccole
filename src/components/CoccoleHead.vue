@@ -79,7 +79,7 @@ export default {
   props: {
     msg: {
       type: String,
-      default: "Message"
+      default: 'Message'
     }
   }
 }

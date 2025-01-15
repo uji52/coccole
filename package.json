@@ -2,6 +2,7 @@
   "name": "coccole",
   "version": "1.0.0",
   "private": true,
+  "license": "CC BY-NC",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
+    "@typescript-eslint/eslint-plugin": "^8.19.0",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/test-utils": "^2.4.6",
