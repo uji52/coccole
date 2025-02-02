@@ -24,6 +24,16 @@ export default defineConfig(async () => {
         '@': path.resolve(__dirname, 'src'),
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @import "@/assets/sass/bootstrap.scss";
+            @import "@/assets/sass/style.scss";
+          `
+        }
+      }
+    },
     build: {
       target: 'esnext',
       minify: 'terser',
