@@ -10,12 +10,13 @@ export default defineConfig(async () => {
   return {
     plugins: [
       vue(),
+      /*
       viteCompression({
         algorithm: 'brotli',
         ext: '.br',
         threshold: 5120,
         deleteOriginFile: true
-      }),
+      }),*/
       imagetools(),
       process.env.ANALYZE ? visualizer({ open: true }) : null
     ].filter(Boolean),
