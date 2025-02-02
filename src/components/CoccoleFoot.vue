@@ -1,5 +1,5 @@
 <template>
-  <div id="fh5co-footer">
+    <div id="fh5co-footer">
     <div class="container">
       <div class="row row-padded">
         <div class="col-md-12 text-center">

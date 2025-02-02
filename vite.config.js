@@ -11,6 +11,8 @@ export default defineConfig({
     viteCompression({
       algorithm: 'gzip',
       ext: '.gz',
+      threshold: 10240,
+      deleteOriginFile: true
     }),
     imagetools(),
     process.env.ANALYZE ? visualizer({ open: true }) : null
@@ -21,7 +23,16 @@ export default defineConfig({
     },
   },
   build: {
+    target: 'esnext',
+    minify: 'terser',
+    cssCodeSplit: true,
     rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor': ['vue'],
+          'style': ['bootstrap']
+        }
+      },
       plugins: [
         require('rollup-plugin-image-files')({
           include: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
@@ -29,22 +40,29 @@ export default defineConfig({
           options: {
             mozjpeg: {
               progressive: true,
-              quality: 80
+              quality: 75,
+              arithmetic: false,
             },
             optipng: {
               enabled: true,
-              optimizationLevel: 5
+              optimizationLevel: 7,
             },
             pngquant: {
               quality: [0.65, 0.90],
-              speed: 4
+              speed: 3,
             },
             webp: {
-              quality: 80
+              quality: 75,
+              lossless: false,
+              nearLossless: false,
             }
           }
         })
       ]
     }
+  },
+  server: {
+    hmr: true,
+    cors: true
   }
 })
