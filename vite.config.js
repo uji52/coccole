@@ -13,8 +13,8 @@ export default defineConfig(async () => {
       viteCompression({
         algorithm: 'brotli',
         ext: '.br',
-        threshold: 10240,
-        deleteOriginFile: false
+        threshold: 5120,
+        deleteOriginFile: true
       }),
       imagetools(),
       process.env.ANALYZE ? visualizer({ open: true }) : null
@@ -31,8 +31,10 @@ export default defineConfig(async () => {
       rollupOptions: {
         output: {
           manualChunks: {
-            'vendor': ['vue', '@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/vue-fontawesome'],
-            'style': ['bootstrap']
+            'vue-core': ['vue'],
+            'fontawesome': ['@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/vue-fontawesome'],
+            'style': ['bootstrap'],
+            'utils': ['moment', 'axios'],
           }
         },
       }

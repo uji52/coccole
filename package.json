@@ -4,7 +4,7 @@
   "private": true,
   "license": "CC BY-NC",
   "scripts": {
-    "serve": "vite --host",
+    "serve": "vite --host --port 8080",
     "build": "vite build",
     "local-deploy": "npm run build;rm -rf /var/www/html/test/*;cp -rp dist/* /var/www/html/test/",
     "depcheck": "depcheck --ignores=file-loader,url-loader,image-webpack-loader",
@@ -16,6 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "github:fortawesome/vue-fontawesome",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.2",
     "jquery": "^3.7.1",
     "moment": "^2.30.1",

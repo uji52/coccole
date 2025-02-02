@@ -1,18 +1,22 @@
 <template>
-  <CoccoleFoot msg="Coccoleへようこそ" />
+  <div id="app">
+    <CoccoleHead msg="wellcome" />
+    <CoccoleMain msg="main" />
+    <CoccoleFoot msg="2022" />
+  </div>
 </template>
 
 <script>
-//import CoccoleHead from './components/CoccoleHead.vue'
-//import CoccoleMain from './components/CoccoleMain.vue'
+import CoccoleHead from './components/CoccoleHead.vue'
+import CoccoleMain from './components/CoccoleMain.vue'
 import CoccoleFoot from './components/CoccoleFoot.vue'
 
 export default {
   name: 'App',
   components: {
-//    CoccoleHead,
-//    CoccoleMain
-    CoccoleFoot
+    CoccoleHead,
+    CoccoleMain,
+    CoccoleFoot,
   }
 }
 </script>
