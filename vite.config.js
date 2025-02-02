@@ -12,7 +12,7 @@ export default defineConfig(async () => {
       vue(),
       viteCompression({
         algorithm: 'brotli',
-        //ext: '.br',
+        ext: '.br',
         threshold: 5120,
         deleteOriginFile: true
       }),
