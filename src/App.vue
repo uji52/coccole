@@ -1,7 +1,7 @@
 <template>
-    <CoccoleHead msg="coccole" />
-    <CoccoleMain msg="main" />
-    <CoccoleFoot msg="2022" />
+  <CoccoleHead msg="coccole" />
+  <CoccoleMain msg="main" />
+  <CoccoleFoot msg="2022" />
 </template>
 
 <script>

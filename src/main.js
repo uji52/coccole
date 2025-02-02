@@ -3,7 +3,7 @@ import App from './App.vue'
 import './assets/css/animate.css'
 import './assets/css/bootstrap.css'
 import './assets/css/bootstrap-datetimepicker.min.css'
-import "./assets/css/flexslider.css"
+import './assets/css/flexslider.css'
 import './assets/css/icomoon.css'
 import './assets/css/simple-line-icons.css'
 import { library } from '@fortawesome/fontawesome-svg-core'

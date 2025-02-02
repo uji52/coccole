@@ -1,21 +1,29 @@
 <template>
   <div id="fh5co-container">
-    <div id="fh5co-home" class="js-fullheight" data-section="home">
+    <div
+      id="fh5co-home"
+      class="js-fullheight"
+      data-section="home"
+    >
       <div class="flexslider">
-        <div class="fh5co-overlay"></div>
+        <div class="fh5co-overlay" />
         <div class="fh5co-text">
           <div class="container">
             <div class="row">
               <h1 class="to-animate">
-                <img src="@/assets/images/logo/Coccole_logo-06.png" class="img-responsive" alt="Coccole">
+                <img
+                  src="@/assets/images/logo/Coccole_logo-06.png"
+                  class="img-responsive"
+                  alt="Coccole"
+                >
               </h1>
             </div>
           </div>
         </div>
         <ul class="slides">
-          <li style="background-image: url(images/shop/Shop_003.jpg);background-position: center;" ></li>
-          <li style="background-image: url(images/shop/Shop_002.jpg);background-position: center;"></li>
-          <li style="background-image: url(images/pan/002.jpg);background-position: center;"></li>
+          <li style="background-image: url(images/shop/Shop_003.jpg);background-position: center;" />
+          <li style="background-image: url(images/shop/Shop_002.jpg);background-position: center;" />
+          <li style="background-image: url(images/pan/002.jpg);background-position: center;" />
         </ul>
       </div>
     </div>
