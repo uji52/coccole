@@ -3,14 +3,14 @@
 </template>
 
 <script>
-//import CoccoleHead from './components/CoccoleHead.vue'
+import CoccoleHead from './components/CoccoleHead.vue'
 //import CoccoleMain from './components/CoccoleMain.vue'
 import CoccoleFoot from './components/CoccoleFoot.vue'
 
 export default {
   name: 'App',
   components: {
-//    CoccoleHead,
+    CoccoleHead,
 //    CoccoleMain
     CoccoleFoot
   }

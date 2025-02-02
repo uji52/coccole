@@ -21,6 +21,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+        include: path.resolve(__dirname, 'src'),
       },
     ],
   },
@@ -28,7 +29,7 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.jsx', '.css']
   },
   plugins: [
     new VueLoaderPlugin(),

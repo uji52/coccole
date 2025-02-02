@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "webpack --mode production",
-    "serve-prd": "webpack serve --mode production",
-    "serve": "webpack serve --mode development",
+    "serve": "webpack serve --mode development --config webpack.config.js",
     "local-deploy": "npm run build;rm -rf /var/www/html/test/*;cp -rp dist/* /var/www/html/test/",
-    "depcheck": "depcheck --ignores=file-loader,url-loader,image-webpack-loader,@vue/cli-plugin-eslint",
+    "depcheck": "depcheck --ignores=file-loader,url-loader,image-webpack-loader",
     "lint": "vue-cli-service lint",
     "test:unit": "jest"
   },
@@ -45,6 +44,7 @@
     "style-loader": "^4.0.0",
     "url-loader": "^4.1.1",
     "vite": "^6.0.11",
+    "vite-imagetools": "^7.0.5",
     "vite-plugin-compression": "^0.5.1",
     "vue-jest": "^5.0.0-alpha.10",
     "vue-loader": "^17.4.2",

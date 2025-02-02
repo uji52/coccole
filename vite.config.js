@@ -1,11 +1,18 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { visualizer } from 'rollup-plugin-visualizer'
+import viteCompression from 'vite-plugin-compression'
+import { imagetools } from 'vite-imagetools'
 import path from 'path'
 
 export default defineConfig({
   plugins: [
     vue(),
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
+    }),
+    imagetools(),
     process.env.ANALYZE ? visualizer({ open: true }) : null
   ].filter(Boolean),
   resolve: {
