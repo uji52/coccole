@@ -15,15 +15,29 @@
                   src="@/assets/images/logo/Coccole_logo-06.png"
                   class="img-responsive"
                   alt="Coccole"
+                  role="img"
+                  aria-label="Coccoleロゴ"                  
                 >
               </h1>
             </div>
           </div>
         </div>
         <ul class="slides">
-          <li style="background-image: url(images/shop/Shop_003.jpg);background-position: center;" />
-          <li style="background-image: url(images/shop/Shop_002.jpg);background-position: center;" />
-          <li style="background-image: url(images/pan/002.jpg);background-position: center;" />
+          <li
+            class="slide-image"
+            :style="{ backgroundImage: `url(${images.shopExterior})` }"
+            @error="(error) => handleImageError('店舗外観', error)"
+          />
+          <li
+            class="slide-image"
+            :style="{ backgroundImage: `url(${images.shopInterior})` }"
+            @error="(error) => handleImageError('店舗内装', error)"
+          />
+          <li
+            class="slide-image"
+            :style="{ backgroundImage: `url(${images.sampleItem})` }"
+            @error="(error) => handleImageError('サンプル商品', error)"
+          />
         </ul>
       </div>
     </div>
@@ -31,6 +45,10 @@
 </template>
 
 <script>
+import shopExterior  from '@/assets/images/shop/Shop_003.jpg';
+import shopInterior from '@/assets/images/shop/Shop_002.jpg';
+import sampleItem from '@/assets/images/pan/002.jpg';
+
 export default {
   name: 'CoccoleHead',
   props: {
@@ -38,7 +56,21 @@ export default {
       type: String,
       default: 'Message'
     }
-  }  
+  },
+  data() {
+    return {
+      images: {
+        shopExterior,
+        shopInterior,
+        sampleItem,
+      }
+    };
+  },
+  methods: {
+    handleImageError(imageName, error) {
+      console.error(`画像「${imageName}」の読み込みに失敗しました:`, error);
+    }
+  }
 }
 </script>
 
@@ -56,5 +88,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.slide-image {
+  background-position: center;
+  background-size: cover;
 }
 </style>
