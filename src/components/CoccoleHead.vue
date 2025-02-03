@@ -23,9 +23,21 @@
           </div>
         </div>
         <ul class="slides">
-          <li :style="{ backgroundImage: `url(${images.shop003})`, backgroundPosition: 'center' }" />
-          <li :style="{ backgroundImage: `url(${images.shop002})`, backgroundPosition: 'center' }" />
-          <li :style="{ backgroundImage: `url(${images.pan002})`, backgroundPosition: 'center' }" />
+          <li
+            class="slide-image"
+            :style="{ backgroundImage: `url(${images.shopExterior})` }"
+            @error="handleImageError"
+          />
+          <li
+            class="slide-image"
+            :style="{ backgroundImage: `url(${images.shopInterior})` }"
+            @error="handleImageError"
+          />
+          <li
+            class="slide-image"
+            :style="{ backgroundImage: `url(${images.sampleItem})` }"
+            @error="handleImageError"
+          />
         </ul>
       </div>
     </div>
@@ -33,9 +45,9 @@
 </template>
 
 <script>
-import shop003 from '@/assets/images/shop/Shop_003.jpg';
-import shop002 from '@/assets/images/shop/Shop_002.jpg';
-import pan002 from '@/assets/images/pan/002.jpg';
+import shopExterior  from '@/assets/images/shop/Shop_003.jpg';
+import shopInterior from '@/assets/images/shop/Shop_002.jpg';
+import sampleItem from '@/assets/images/pan/002.jpg';
 
 export default {
   name: 'CoccoleHead',
@@ -48,11 +60,16 @@ export default {
   data() {
     return {
       images: {
-        shop003,
-        shop002,
-        pan002
+        shopExterior,
+        shopInterior,
+        sampleItem,
       }
     };
+  },
+  methods: {
+    handleImageError(error) {
+      console.error('画像の読み込みに失敗しました:', error);
+    }
   }
 }
 </script>
@@ -71,5 +88,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.slide-image {
+  background-position: center;
+  background-size: cover;
 }
 </style>
