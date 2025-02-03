@@ -26,17 +26,17 @@
           <li
             class="slide-image"
             :style="{ backgroundImage: `url(${images.shopExterior})` }"
-            @error="handleImageError"
+            @error="(error) => handleImageError(error, '店舗外観')"
           />
           <li
             class="slide-image"
             :style="{ backgroundImage: `url(${images.shopInterior})` }"
-            @error="handleImageError"
+            @error="(error) => handleImageError(error, '店舗内装')"
           />
           <li
             class="slide-image"
             :style="{ backgroundImage: `url(${images.sampleItem})` }"
-            @error="handleImageError"
+            @error="(error) => handleImageError(error, 'サンプル商品')"
           />
         </ul>
       </div>
@@ -68,7 +68,7 @@ export default {
   },
   methods: {
     handleImageError(error) {
-      console.error('画像の読み込みに失敗しました:', error);
+      console.error(`画像「${imageName}」の読み込みに失敗しました:`, error);
     }
   }
 }

@@ -120,8 +120,9 @@
           <div class="fh5co-grid">
             <div class="fh5co-v-half to-animate-2">
               <div
-                class="fh5co-v-col-2 fh5co-bg-img"
-                style="background-image: url(./images/pan/003.jpg)"
+                class="slide-image fh5co-v-col-2 fh5co-bg-img"
+                :style="{ backgroundImage: `url(${images.pan1})` }"
+                @error="(error) => handleImageError(error, 'タルタルチキン')"
               />
               <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
                 <h2>タルタルチキン</h2>
@@ -132,8 +133,9 @@
             <div class="fh5co-v-half">
               <div class="fh5co-h-row-2 to-animate-2">
                 <div
-                  class="fh5co-v-col-2 fh5co-bg-img"
-                  style="background-image: url(./images/pan/004.jpg)"
+                  class="slide-image fh5co-v-col-2 fh5co-bg-img"
+                  :style="{ backgroundImage: `url(${images.pan2})` }"
+                  @error="(error) => handleImageError(error, '食パン')"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-left">
                   <h2>Coccole食パン(一斤)</h2>
@@ -143,8 +145,9 @@
               </div>
               <div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
                 <div
-                  class="fh5co-v-col-2 fh5co-bg-img"
-                  style="background-image: url(./images/pan/021.jpg)"
+                  class="slide-image fh5co-v-col-2 fh5co-bg-img"
+                  :style="{ backgroundImage: `url(${images.pan3})` }"
+                  @error="(error) => handleImageError(error, 'バーニャカウダピザ')"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-right">
                   <h2>バーニャカウダピザ</h2>
@@ -157,8 +160,9 @@
             <div class="fh5co-v-half">
               <div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
                 <div
-                  class="fh5co-v-col-2 fh5co-bg-img"
-                  style="background-image: url(./images/pan/006.jpg)"
+                  class="slide-image fh5co-v-col-2 fh5co-bg-img"
+                  :style="{ backgroundImage: `url(${images.pan4})` }"
+                  @error="(error) => handleImageError(error, '塩あんパン')"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-right">
                   <h2>塩あんパン</h2>
@@ -168,8 +172,9 @@
               </div>
               <div class="fh5co-h-row-2 to-animate-2">
                 <div
-                  class="fh5co-v-col-2 fh5co-bg-img"
-                  style="background-image: url(./images/pan/010.jpg)"
+                  class="slide-image fh5co-v-col-2 fh5co-bg-img"
+                  :style="{ backgroundImage: `url(${images.pan5})` }"
+                  @error="(error) => handleImageError(error, 'クリームパン')"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-left">
                   <h2>クリームパン</h2>
@@ -180,8 +185,9 @@
             </div>
             <div class="fh5co-v-half to-animate-2">
               <div
-                class="fh5co-v-col-2 fh5co-bg-img"
-                style="background-image: url(./images/pan/012.jpg)"
+                class="slide-image fh5co-v-col-2 fh5co-bg-img"
+                :style="{ backgroundImage: `url(${images.pan6})` }"
+                @error="(error) => handleImageError(error, '季節フルーツのデニッシュタルト')"
               />
               <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
                 <h2>季節フルーツのデニッシュタルト</h2>
@@ -771,6 +777,13 @@
 </template>
 
 <script>
+import pan1 from '@/assets/images/pan/003.jpg';
+import pan2 from '@/assets/images/pan/004.jpg';
+import pan3 from '@/assets/images/pan/021.jpg';
+import pan4 from '@/assets/images/pan/006.jpg';
+import pan5 from '@/assets/images/pan/010.jpg';
+import pan6 from '@/assets/images/pan/012.jpg';
+
 export default {
   name: 'CoccoleMain',
   props: {
@@ -778,8 +791,26 @@ export default {
       type: String,
       default: 'Message'
     }
+  },
+  data() {
+    return {
+      images: {
+        pan1,
+        pan2,
+        pan3,
+        pan4,
+        pan5,
+        pan6,
+      }
+    };
+  },
+  methods: {
+    handleImageError(error) {
+      console.error(`画像「${imageName}」の読み込みに失敗しました:`, error);
+    }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -800,5 +831,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.slide-image {
+  background-position: center;
+  background-size: cover;
 }
 </style>
