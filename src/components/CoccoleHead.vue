@@ -15,15 +15,17 @@
                   src="@/assets/images/logo/Coccole_logo-06.png"
                   class="img-responsive"
                   alt="Coccole"
+                  role="img"
+                  aria-label="Coccoleロゴ"                  
                 >
               </h1>
             </div>
           </div>
         </div>
         <ul class="slides">
-          <li style="background-image: url(images/shop/Shop_003.jpg);background-position: center;" />
-          <li style="background-image: url(images/shop/Shop_002.jpg);background-position: center;" />
-          <li style="background-image: url(images/pan/002.jpg);background-position: center;" />
+          <li :style="{ backgroundImage: `url(${images.shop003})`, backgroundPosition: 'center' }" />
+          <li :style="{ backgroundImage: `url(${images.shop002})`, backgroundPosition: 'center' }" />
+          <li :style="{ backgroundImage: `url(${images.pan002})`, backgroundPosition: 'center' }" />
         </ul>
       </div>
     </div>
@@ -31,6 +33,10 @@
 </template>
 
 <script>
+import shop003 from '@/assets/images/shop/Shop_003.jpg';
+import shop002 from '@/assets/images/shop/Shop_002.jpg';
+import pan002 from '@/assets/images/pan/002.jpg';
+
 export default {
   name: 'CoccoleHead',
   props: {
@@ -38,7 +44,16 @@ export default {
       type: String,
       default: 'Message'
     }
-  }  
+  },
+  data() {
+    return {
+      images: {
+        shop003,
+        shop002,
+        pan002
+      }
+    };
+  }
 }
 </script>
 
