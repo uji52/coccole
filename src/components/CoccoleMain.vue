@@ -805,7 +805,7 @@ export default {
     };
   },
   methods: {
-    handleImageError(error) {
+    handleImageError(imageName, error) {
       console.error(`画像「${imageName}」の読み込みに失敗しました:`, error);
     }
   }
