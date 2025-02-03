@@ -26,17 +26,17 @@
           <li
             class="slide-image"
             :style="{ backgroundImage: `url(${images.shopExterior})` }"
-            @error="(error) => handleImageError(error, '店舗外観')"
+            @error="(error) => handleImageError('店舗外観', error)"
           />
           <li
             class="slide-image"
             :style="{ backgroundImage: `url(${images.shopInterior})` }"
-            @error="(error) => handleImageError(error, '店舗内装')"
+            @error="(error) => handleImageError('店舗内装', error)"
           />
           <li
             class="slide-image"
             :style="{ backgroundImage: `url(${images.sampleItem})` }"
-            @error="(error) => handleImageError(error, 'サンプル商品')"
+            @error="(error) => handleImageError('サンプル商品', error)"
           />
         </ul>
       </div>

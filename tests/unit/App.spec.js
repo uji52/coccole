@@ -7,6 +7,12 @@ jest.mock('@/assets/images/logo/Coccole_logo-06.png', () => 'test-file-stub');
 jest.mock('@/assets/images/shop/Shop_003.jpg', () => 'test-file-stub');
 jest.mock('@/assets/images/shop/Shop_002.jpg', () => 'test-file-stub');
 jest.mock('@/assets/images/pan/002.jpg', () => 'test-file-stub');
+jest.mock('@/assets/images/pan/003.jpg', () => 'test-file-stub');
+jest.mock('@/assets/images/pan/004.jpg', () => 'test-file-stub');
+jest.mock('@/assets/images/pan/021.jpg', () => 'test-file-stub');
+jest.mock('@/assets/images/pan/006.jpg', () => 'test-file-stub');
+jest.mock('@/assets/images/pan/010.jpg', () => 'test-file-stub');
+jest.mock('@/assets/images/pan/012.jpg', () => 'test-file-stub');
 
 describe('App.vue', () => {
   it('run test', () => {
@@ -20,5 +26,5 @@ describe('App.vue', () => {
     expect(coccoleFoot.exists()).toBe(true)
     expect(coccoleFoot.props().msg).toBe('Coccoleへようこそ')
   })
-    */
+  */
 })

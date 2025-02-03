@@ -122,7 +122,7 @@
               <div
                 class="slide-image fh5co-v-col-2 fh5co-bg-img"
                 :style="{ backgroundImage: `url(${images.pan1})` }"
-                @error="(error) => handleImageError(error, 'タルタルチキン')"
+                @error="(error) => handleImageError('タルタルチキン', error)"
               />
               <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
                 <h2>タルタルチキン</h2>
@@ -135,7 +135,7 @@
                 <div
                   class="slide-image fh5co-v-col-2 fh5co-bg-img"
                   :style="{ backgroundImage: `url(${images.pan2})` }"
-                  @error="(error) => handleImageError(error, '食パン')"
+                  @error="(error) => handleImageError('食パン', error)"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-left">
                   <h2>Coccole食パン(一斤)</h2>
@@ -147,7 +147,7 @@
                 <div
                   class="slide-image fh5co-v-col-2 fh5co-bg-img"
                   :style="{ backgroundImage: `url(${images.pan3})` }"
-                  @error="(error) => handleImageError(error, 'バーニャカウダピザ')"
+                  @error="(error) => handleImageError('バーニャカウダピザ', error)"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-right">
                   <h2>バーニャカウダピザ</h2>
@@ -162,7 +162,7 @@
                 <div
                   class="slide-image fh5co-v-col-2 fh5co-bg-img"
                   :style="{ backgroundImage: `url(${images.pan4})` }"
-                  @error="(error) => handleImageError(error, '塩あんパン')"
+                  @error="(error) => handleImageError('塩あんパン', error)"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-right">
                   <h2>塩あんパン</h2>
@@ -174,7 +174,7 @@
                 <div
                   class="slide-image fh5co-v-col-2 fh5co-bg-img"
                   :style="{ backgroundImage: `url(${images.pan5})` }"
-                  @error="(error) => handleImageError(error, 'クリームパン')"
+                  @error="(error) => handleImageError('クリームパン', error)"
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-left">
                   <h2>クリームパン</h2>
@@ -187,7 +187,7 @@
               <div
                 class="slide-image fh5co-v-col-2 fh5co-bg-img"
                 :style="{ backgroundImage: `url(${images.pan6})` }"
-                @error="(error) => handleImageError(error, '季節フルーツのデニッシュタルト')"
+                @error="(error) => handleImageError('季節フルーツのデニッシュタルト', error)"
               />
               <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
                 <h2>季節フルーツのデニッシュタルト</h2>
