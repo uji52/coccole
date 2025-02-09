@@ -31,7 +31,15 @@ export default defineConfig(async () => {
           additionalData: `
             @import "@/assets/sass/bootstrap.scss";
             @import "@/assets/sass/style.scss";
-          `
+          `,
+          api: 'modern-compiler',
+          silenceDeprecations: [ // めんどくさすぎる＆すべて外部SCSS＆デザインのみの問題のため、嫌な気分になるが警告無視
+            "mixed-decls",
+            "slash-div",
+            "global-builtin",
+            "color-functions",
+            "import"
+          ]
         }
       }
     },

@@ -22,6 +22,10 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      - name: CSS Lint
+        run: npm run lint:css
+
   UnitTest:
     runs-on: ubuntu-24.04
     steps:
@@ -33,6 +37,7 @@ jobs:
 
       - name: Lint
         run: npm run test:unit
+
   DeployDevelop:
     runs-on: ubuntu-24.04
     steps:
@@ -49,22 +54,8 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev
-#        run: |
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.br" --content-encoding br --content-type "application/javascript"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.css" --content-encoding br --content-type "text/css"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.html" --content-encoding br --content-type "text/html"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.ico" --content-encoding br --content-type "image/x-icon"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.js" --content-encoding br --content-type "application/javascript"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.json" --content-encoding br --content-type "application/json"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.png" --content-encoding br --content-type "image/png"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.svg" --content-encoding br --content-type "image/svg+xml"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.woff" --content-encoding br --content-type "font/woff"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.woff2" --content-encoding br --content-type "font/woff2"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.ttf" --content-encoding br --content-type "font/ttf"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.eot" --content-encoding br --content-type "font/eot"
-#          aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev --recursive --exclude "*" --include "*.map" --content-encoding br --content-type "application/json"
-                    
+        run: aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev     
+
       - name: Invalidation  # CF Invalidation
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
