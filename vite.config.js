@@ -54,7 +54,7 @@ export default defineConfig(async () => {
             'fontawesome': ['@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/vue-fontawesome'],
             'style': ['bootstrap'],
             'utils': ['moment', 'axios'],
-            'jquery': ['jquery', 'jquery.easing', 'jquery.flexslider', 'jquery.stellar', 'jquery.waypoints'],
+            'jquery': ['jquery'],
           },
         },
       },
