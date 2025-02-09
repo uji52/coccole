@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-idiomatic-order"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ]
+  },
+  "ignoreFiles": [
+    "src/assets/sass/bootstrap/**/*.scss",
+    "src/assets/sass/bootstrap-compass.scss",
+    "src/assets/sass/_bootstrap-mincer.scss",
+    "src/assets/sass/_bootstrap-sprockets.scss",
+    "src/assets/sass/blue.scss",
+    "src/assets/sass/bootstrap.scss",
+    "src/assets/sass/style.scss"
+  ]
+}
