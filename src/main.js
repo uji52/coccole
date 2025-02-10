@@ -10,12 +10,13 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLeaf } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faLine } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 import '@/assets/js/bootstrap.min.js'
 import '@/assets/js/bootstrap-datetimepicker.min.js'
 import '@/assets/js/main.js'
+import '@/assets/js/jquery.easing.1.3.js'
 import '@/assets/js/jquery.waypoints.min.js'
 import '@/assets/js/jquery.flexslider-min.js'
-import '@/assets/js/jquery.easing.1.3.js'
 
 library.add(faLeaf)
 library.add(faInstagram)
