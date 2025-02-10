@@ -12,6 +12,7 @@ import { faInstagram, faLine } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import '@/assets/js/bootstrap.min.js'
 import '@/assets/js/bootstrap-datetimepicker.min.js'
+import '@/assets/js/main.js'
 
 library.add(faLeaf)
 library.add(faInstagram)
