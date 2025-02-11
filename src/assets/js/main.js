@@ -53,20 +53,26 @@
 	}
 
 	var offcanvasMenu = function() {
-		const offcanvasDiv = document.createElement('div');
-		offcanvasDiv.id = 'fh5co-offcanvas';
-		const link = document.createElement('a');
-		link.href = '#';
-		link.className = 'js-fh5co-nav-toggle fh5co-nav-toggle';
-		link.innerHTML = '<i></i>';
-		document.body.prepend(link);
-		document.body.prepend(offcanvasDiv);
+		try {
+			const offcanvasDiv = document.createElement('div');
+			offcanvasDiv.id = 'fh5co-offcanvas';
+ 
+			const link = document.createElement('a');
+			link.href = '#';
+			link.className = 'js-fh5co-nav-toggle fh5co-nav-toggle';
+			link.innerHTML = '<i></i>';
 
-		$('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function(){
-			var $this = $(this);
-			$('#fh5co-offcanvas').append($this.clone());
-		});
-		// $('#fh5co-offcanvas').append
+			document.body.prepend(link);
+			document.body.prepend(offcanvasDiv);
+
+			document.querySelectorAll('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a')
+			   .forEach(element => {
+			    offcanvasDiv.appendChild(element.cloneNode(true));
+			});
+		} catch (error) {
+			console.error('Failed to initialize offcanvas menu:', error);
+		}
+
 	};
 
 	var mainMenuSticky = function() {
@@ -122,6 +128,22 @@
 			document.body.classList.toggle('offcanvas-visible');
 			this.classList.toggle('active');
 			event.preventDefault();
+
+			try {
+				const toggleButton = document.querySelector('.js-fh5co-nav-toggle');
+				if (!toggleButton) {
+					throw new Error('Navigation toggle button not found');
+				}
+  
+				toggleButton.addEventListener('click', function(event) {
+					document.body.classList.toggle('fh5co-overflow');
+					document.body.classList.toggle('offcanvas-visible');
+					this.classList.toggle('active');
+					event.preventDefault();
+				});
+			} catch (error) {
+				console.error('Failed to initialize burger menu:', error);
+			}
 		});
 	};
 
@@ -152,8 +174,15 @@
 
 		$(window).resize(function() {
 			if ( $('body').hasClass('offcanvas-visible') ) {
-		   		$('body').removeClass('offcanvas-visible');
-			   	document.querySelector('.js-fh5co-nav-toggle').classList.remove('active');
+				try {
+					document.body.classList.remove('offcanvas-visible');
+					const toggleButton = document.querySelector('.js-fh5co-nav-toggle');
+					if (toggleButton) {
+						toggleButton.classList.remove('active');
+					}
+				} catch (error) {
+					console.error('Failed to handle window resize:', error);
+				}
 			}
 		});
 		
