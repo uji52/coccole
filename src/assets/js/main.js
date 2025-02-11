@@ -53,17 +53,26 @@
 	}
 
 	var offcanvasMenu = function() {
-		//$('body').prepend('<div id="fh5co-offcanvas" />');
-		//$('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>');
+		try {
+			const offcanvasDiv = document.createElement('div');
+			offcanvasDiv.id = 'fh5co-offcanvas';
+ 
+			const link = document.createElement('a');
+			link.href = '#';
+			link.className = 'js-fh5co-nav-toggle fh5co-nav-toggle';
+			link.innerHTML = '<i></i>';
 
-		$('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function(){
+			document.body.prepend(link);
+			document.body.prepend(offcanvasDiv);
 
-			var $this = $(this);
+			document.querySelectorAll('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a')
+			   .forEach(element => {
+			    offcanvasDiv.appendChild(element.cloneNode(true));
+			});
+		} catch (error) {
+			console.error('Failed to initialize offcanvas menu:', error);
+		}
 
-			$('#fh5co-offcanvas').append($this.clone());
-
-		});
-		// $('#fh5co-offcanvas').append
 	};
 
 	var mainMenuSticky = function() {
@@ -114,17 +123,28 @@
 
 	// Burger Menu
 	var burgerMenu = function() {
-
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-
-			var $this = $(this);
-
-			$('body').toggleClass('fh5co-overflow offcanvas-visible');
-			$this.toggleClass('active');
+		document.querySelector('.js-fh5co-nav-toggle').addEventListener('click', (event) => {
+			document.body.classList.toggle('fh5co-overflow');
+			document.body.classList.toggle('offcanvas-visible');
+			this.classList.toggle('active');
 			event.preventDefault();
 
+			try {
+				const toggleButton = document.querySelector('.js-fh5co-nav-toggle');
+				if (!toggleButton) {
+					throw new Error('Navigation toggle button not found');
+				}
+  
+				toggleButton.addEventListener('click', function(event) {
+					document.body.classList.toggle('fh5co-overflow');
+					document.body.classList.toggle('offcanvas-visible');
+					this.classList.toggle('active');
+					event.preventDefault();
+				});
+			} catch (error) {
+				console.error('Failed to initialize burger menu:', error);
+			}
 		});
-
 	};
 
 	var scrolledWindow = function() {
@@ -154,9 +174,16 @@
 
 		$(window).resize(function() {
 			if ( $('body').hasClass('offcanvas-visible') ) {
-		   	$('body').removeClass('offcanvas-visible');
-		   	$('.js-fh5co-nav-toggle').removeClass('active');
-		   }
+				try {
+					document.body.classList.remove('offcanvas-visible');
+					const toggleButton = document.querySelector('.js-fh5co-nav-toggle');
+					if (toggleButton) {
+						toggleButton.classList.remove('active');
+					}
+				} catch (error) {
+					console.error('Failed to handle window resize:', error);
+				}
+			}
 		});
 		
 	};
