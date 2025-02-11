@@ -53,15 +53,15 @@
 	}
 
 	var offcanvasMenu = function() {
-		//$('body').prepend('<div id="fh5co-offcanvas" />');
-		//$('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>');
-
+		$('body').prepend('<div id="fh5co-offcanvas" />');
+		const link = document.createElement('a');
+		link.href = '#';
+		link.className = 'js-fh5co-nav-toggle fh5co-nav-toggle';
+		link.innerHTML = '<i></i>';
+		document.body.prepend(link);
 		$('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function(){
-
 			var $this = $(this);
-
 			$('#fh5co-offcanvas').append($this.clone());
-
 		});
 		// $('#fh5co-offcanvas').append
 	};
@@ -114,17 +114,12 @@
 
 	// Burger Menu
 	var burgerMenu = function() {
-
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-
+		document.querySelector('.js-fh5co-nav-toggle').addEventListener('click', (event) => {
 			var $this = $(this);
-
 			$('body').toggleClass('fh5co-overflow offcanvas-visible');
 			$this.toggleClass('active');
 			event.preventDefault();
-
 		});
-
 	};
 
 	var scrolledWindow = function() {
@@ -155,7 +150,7 @@
 		$(window).resize(function() {
 			if ( $('body').hasClass('offcanvas-visible') ) {
 		   	$('body').removeClass('offcanvas-visible');
-		   	$('.js-fh5co-nav-toggle').removeClass('active');
+		   	document.querySelector('.js-fh5co-nav-toggle').removeClass('active');
 		   }
 		});
 		
