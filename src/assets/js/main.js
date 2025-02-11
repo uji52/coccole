@@ -53,12 +53,15 @@
 	}
 
 	var offcanvasMenu = function() {
-		$('body').prepend('<div id="fh5co-offcanvas" />');
+		const offcanvasDiv = document.createElement('div');
+		offcanvasDiv.id = 'fh5co-offcanvas';
 		const link = document.createElement('a');
 		link.href = '#';
 		link.className = 'js-fh5co-nav-toggle fh5co-nav-toggle';
 		link.innerHTML = '<i></i>';
 		document.body.prepend(link);
+		document.body.prepend(offcanvasDiv);
+
 		$('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function(){
 			var $this = $(this);
 			$('#fh5co-offcanvas').append($this.clone());
@@ -115,9 +118,9 @@
 	// Burger Menu
 	var burgerMenu = function() {
 		document.querySelector('.js-fh5co-nav-toggle').addEventListener('click', (event) => {
-			var $this = $(this);
-			$('body').toggleClass('fh5co-overflow offcanvas-visible');
-			$this.toggleClass('active');
+			document.body.classList.toggle('fh5co-overflow');
+			document.body.classList.toggle('offcanvas-visible');
+			this.classList.toggle('active');
 			event.preventDefault();
 		});
 	};
@@ -149,9 +152,9 @@
 
 		$(window).resize(function() {
 			if ( $('body').hasClass('offcanvas-visible') ) {
-		   	$('body').removeClass('offcanvas-visible');
-		   	document.querySelector('.js-fh5co-nav-toggle').removeClass('active');
-		   }
+		   		$('body').removeClass('offcanvas-visible');
+			   	document.querySelector('.js-fh5co-nav-toggle').classList.remove('active');
+			}
 		});
 		
 	};
