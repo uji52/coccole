@@ -78,7 +78,7 @@
           <div class="col-md-6">
             <figure>
               <img
-                src="@/assets/images/schedule/202503.jpg"
+                src="@/assets/images/schedule/202504.jpg"
                 class="img-responsive"
                 alt="Free HTML5 Templates by FREEHTML5.co"
               >
@@ -87,7 +87,7 @@
           <div class="col-md-6">
             <figure>
               <img
-                src="@/assets/images/schedule/202504.jpg"
+                src="@/assets/images/schedule/202505.jpg"
                 class="img-responsive"
                 alt="Free HTML5 Templates by FREEHTML5.co"
               >
