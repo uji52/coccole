@@ -126,7 +126,7 @@
               />
               <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
                 <h2>タルタルチキン</h2>
-                <span class="pricing">￥320</span>
+                <span class="pricing">￥340</span>
                 <p>具だくさんなタルタルと塩麹に漬け込んだ照り焼きチキンをふわもち生地で挟み焼きました。</p>
               </div>
             </div>
@@ -178,7 +178,7 @@
                 />
                 <div class="fh5co-v-col-2 fh5co-text arrow-left">
                   <h2>クリームパン</h2>
-                  <span class="pricing">￥250</span>
+                  <span class="pricing">￥260</span>
                   <p>クリームのプールのようなクリームパンです。</p>
                 </div>
               </div>
@@ -267,27 +267,22 @@
                   <div class="fh5co-food-desc">
                     <figure>
                       <img
-                        src="@/assets/images/pan/034.jpg"
+                        src="@/assets/images/pan/036.jpg"
                         class="img-responsive"
                         alt="Free HTML5 Templates by FREEHTML5.co"
                       >
                     </figure>
                     <div>
-                      <h3>海老マヨピザ</h3>
-                      <p>プリップリのえびちゃんです！<br>季節のお野菜とオーロラソースと一緒に焼き上げてます。アンチョビソースにたっぷりのお野菜をのせて焼き上げました。</p>
+                      <h3>海老マヨフォカッチャ</h3>
+                      <p>プリップリのえびちゃんです！<br>季節のお野菜とオーロラソースと一緒に焼き上げてます。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
                     <figure>
                       <img
-                        src="@/assets/images/pan/023.jpg"
+                        src="@/assets/images/pan/037.jpg"
                         class="img-responsive"
                         alt="Free HTML5 Templates by FREEHTML5.co"
                       >
@@ -297,11 +292,6 @@
                       <p>ベーコンととまとの王道ピザ！つるしベーコン美味しいですよね！</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -317,31 +307,21 @@
                       <p>ゴロゴロ大きめ具材を入れたタルタルソースと照り焼きちきんをふわもちの生地に挟んで焼き上げました。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
                     <figure>
                       <img
-                        src="@/assets/images/pan/014.jpg"
+                        src="@/assets/images/pan/038.jpg"
                         class="img-responsive"
                         alt="Free HTML5 Templates by FREEHTML5.co"
                       >
                     </figure>
                     <div>
-                      <h3>きのこグラタン</h3>
-                      <p>ポルチーニを使用した3種類のきのこと滑らかなベシャメルソースをのせて焼き上げました。</p>
+                      <h3>いぶりがっこポテトサラダ</h3>
+                      <p>秋田名物のいぶりがっこを使用した、国産小麦と和風の味わいがよく合うポテトサラダパンです！アクセントにくるみも乗ってます。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -357,11 +337,6 @@
                       <p>全粒粉カンパーニュを使用した食べごたえのあるソーセージクロックムッシュです！</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -377,11 +352,6 @@
                       <p>ゲランドの塩を使用しています。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
               </ul>
             </div>
@@ -404,11 +374,6 @@
                       <p>フルーツごとに合わせたクリームと一緒に。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -424,11 +389,6 @@
                       <p>ほろ苦いコーヒーフィリングを巻き込んだパンにたっぷりのマスカルポーネクリームをのせました。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -444,11 +404,6 @@
                       <p>アーモンドスライスをたっぷり巻き込み甘さ控えめに仕上げました！ペロリといけちゃいます！</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -461,14 +416,9 @@
                     </figure>
                     <div>
                       <h3>フェアリーパン</h3>
-                      <p>本日coccoleに現れた妖精さんです。おこちゃまが大好き！中にはチョコとほうれん草コーンさん。</p>
+                      <p>本日coccoleに現れた妖精さんです。おこちゃまが大好き！中にはチョコクリームが入っています！</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -484,11 +434,6 @@
                       <p>クリームのプールのようなクリームパンです。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -504,11 +449,6 @@
                       <p>ブルーチーズを使用したチーズソースと柔らかく下処理したドライ無花果を挟みました。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
               </ul>
             </div>
@@ -531,32 +471,7 @@
                       <p>ガーリックと黒胡椒のきいたガツンとしたたまごサンドです！手間ひまかけたしっとりツナサンドドライトマトがアクセントです。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
-                <!--
-                <li>
-                  <div class="fh5co-food-desc">
-                    <figure>
-                      <img src="@/assets/images/pan/0xx.jpg" class="img-responsive" alt="Free HTML5 Templates by FREEHTML5.co">
-                    </figure>
-                    <div>
-                      <h3>ミックスサンド</h3>
-                      <p></p>
-                    </div>
-                  </div>
-                  -->
-                <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
-                <!--
-                </li>
-                -->
                 <li>
                   <div class="fh5co-food-desc">
                     <figure>
@@ -571,11 +486,6 @@
                       <p>ラム酒をしっかり効かせたレーズンと北海道産クリームチーズで作ったフィリングをカンパーニュで挟みました！</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -591,11 +501,6 @@
                       <p>塩を効かせたあんことバターをたっぷりカンパーニュで挟みました。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
               </ul>
             </div>
@@ -618,11 +523,6 @@
                       <p>耳までしっとりもちもちです。（ハーフでも販売しています）</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -638,11 +538,6 @@
                       <p>高加水で捏ね上げ、12時間以上の長時間発酵で小麦の旨味を引き出しました！</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -658,11 +553,6 @@
                       <p>バターをのせてトーストしていただくと、カリッモチッジュワーの三重奏です！コーヒーの香りとキャラメルの甘さに癒やされてほしい！</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
                 <li>
                   <div class="fh5co-food-desc">
@@ -678,11 +568,6 @@
                       <p>たっぷりのアールグレイを使用した生地に柔らかく下処理したドライ無花果と、ホワイトチョコを巻き込んで焼き上げました。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
                 </li>
               </ul>
             </div>
@@ -691,6 +576,8 @@
             <div class="fh5co-food-menu to-animate-2">
               <h2>お菓子</h2>
               <ul>
+                <!-- 休止 -->
+                <!--
                 <li>
                   <div class="fh5co-food-desc">
                     <figure>
@@ -705,12 +592,23 @@
                       <p>チョコチップとクランベリーを混ぜ込みました。こめ油を使用しています。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
+                </li>
+                -->
+                <li>
+                  <div class="fh5co-food-desc">
+                    <figure>
+                      <img
+                        src="@/assets/images/pan/039.jpg"
+                        class="img-responsive"
+                        alt="Free HTML5 Templates by FREEHTML5.co"
+                      >
+                    </figure>
+                    <div>
+                      <h3>フロランタン</h3>
+                      <p>キャラメルコーティングした香ばしいアーモンドをたっぷり乗せたクッキーです！</p>
+                    </div>
                   </div>
-                  -->
-                </li>  
+                </li>
                 <li>
                   <div class="fh5co-food-desc">
                     <figure>
@@ -725,19 +623,13 @@
                       <p>スパイスの効いた人参ケーキです。</p>
                     </div>
                   </div>
-                  <!--
-                  <div class="fh5co-food-pricing">
-                    ￥XXX
-                  </div>
-                  -->
-                </li>  
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div
       id="fh5co-access"
       data-section="access"
@@ -766,7 +658,7 @@
               <p class="sub-heading">
                 横浜市栄区長沼町<br>
                 <br>
-                長沼バス停と長沼町内会館の間の小道を東に30秒
+                長沼バス停と長沼町内会館の間の小道を東(マンション方向)に30秒
               </p>
             </div>
           </div>
@@ -779,7 +671,7 @@
 <script>
 import pan1 from '@/assets/images/pan/003.jpg';
 import pan2 from '@/assets/images/pan/004.jpg';
-import pan3 from '@/assets/images/pan/021.jpg';
+import pan3 from '@/assets/images/pan/035.jpg';
 import pan4 from '@/assets/images/pan/006.jpg';
 import pan5 from '@/assets/images/pan/010.jpg';
 import pan6 from '@/assets/images/pan/012.jpg';
