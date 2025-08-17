@@ -75,19 +75,28 @@
               営業スケジュールは下記の予定です。
             </p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <figure>
               <img
-                src="@/assets/images/schedule/202507.jpg"
+                src="@/assets/images/schedule/202508.jpg"
                 class="img-responsive"
                 alt="Free HTML5 Templates by FREEHTML5.co"
               >
             </figure>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <figure>
               <img
-                src="@/assets/images/schedule/202508.jpg"
+                src="@/assets/images/schedule/202509.jpg"
+                class="img-responsive"
+                alt="Free HTML5 Templates by FREEHTML5.co"
+              >
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure>
+              <img
+                src="@/assets/images/schedule/202510.jpg"
                 class="img-responsive"
                 alt="Free HTML5 Templates by FREEHTML5.co"
               >
