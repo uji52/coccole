@@ -271,6 +271,7 @@
                       <img
                         src="@/assets/images/pan/036.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="海老マヨフォカッチャ"
                       >
                     </figure>
@@ -286,6 +287,7 @@
                       <img
                         src="@/assets/images/pan/037.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="つるしベーコンとトマトのピザ"
                       >
                     </figure>
@@ -301,6 +303,7 @@
                       <img
                         src="@/assets/images/pan/016.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="タルタルチキン"
                       >
                     </figure>
@@ -316,6 +319,7 @@
                       <img
                         src="@/assets/images/pan/038.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="いぶりがっこポテトサラダ"
                       >
                     </figure>
@@ -331,6 +335,7 @@
                       <img
                         src="@/assets/images/pan/025.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="クロックムッシュ"
                       >
                     </figure>
@@ -346,6 +351,7 @@
                       <img
                         src="@/assets/images/pan/017.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="塩パン"
                       >
                     </figure>
@@ -368,6 +374,7 @@
                       <img
                         src="@/assets/images/pan/012.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="季節フルーツのデニッシュタルト"
                       >
                     </figure>
@@ -383,6 +390,7 @@
                       <img
                         src="@/assets/images/pan/018.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="ティラミスロール"
                       >
                     </figure>
@@ -398,6 +406,7 @@
                       <img
                         src="@/assets/images/pan/027.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="シナモンロール"
                       >
                     </figure>
@@ -413,6 +422,7 @@
                       <img
                         src="@/assets/images/pan/026.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="フェアリーパン"
                       >
                     </figure>
@@ -428,6 +438,7 @@
                       <img
                         src="@/assets/images/pan/010.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="クリームパン"
                       >
                     </figure>
@@ -443,6 +454,7 @@
                       <img
                         src="@/assets/images/pan/013.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="無花果ブルー"
                       >
                     </figure>
@@ -465,6 +477,7 @@
                       <img
                         src="@/assets/images/pan/030.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="ガーリックたまごサンド、ツナとドライトマトのサンド、ミックスサンド"
                       >
                     </figure>
@@ -480,6 +493,7 @@
                       <img
                         src="@/assets/images/pan/032.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="大人のラムレーズンサンド"
                       >
                     </figure>
@@ -495,6 +509,7 @@
                       <img
                         src="@/assets/images/pan/028.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="あんバターサンド"
                       >
                     </figure>
@@ -517,6 +532,7 @@
                       <img
                         src="@/assets/images/pan/004.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="食パン"
                       >
                     </figure>
@@ -532,6 +548,7 @@
                       <img
                         src="@/assets/images/pan/031.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="全粒粉のカンパーニュ"
                       >
                     </figure>
@@ -547,6 +564,7 @@
                       <img
                         src="@/assets/images/pan/020.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="コーヒーキャラメルカンパーニュ"
                       >
                     </figure>
@@ -562,6 +580,7 @@
                       <img
                         src="@/assets/images/pan/022.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="無花果とアールグレイのカンパーニュ"
                       >
                     </figure>
@@ -586,6 +605,7 @@
                       <img
                         src="@/assets/images/pan/029.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="クランベリーチョコマフィン"
                       >
                     </figure>
@@ -602,6 +622,7 @@
                       <img
                         src="@/assets/images/pan/039.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="フロランタン"
                       >
                     </figure>
@@ -617,6 +638,7 @@
                       <img
                         src="@/assets/images/pan/015.jpg"
                         class="img-responsive"
+                        loading="lazy"
                         alt="キャロットケーキ"
                       >
                     </figure>
