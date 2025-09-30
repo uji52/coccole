@@ -81,7 +81,7 @@
                 src="@/assets/images/schedule/202509.jpg"
                 class="img-responsive"
                 loading="lazy"
-                alt="Free HTML5 Templates by FREEHTML5.co"
+                alt="営業カレンダー(9月)"
               >
             </figure>
           </div>
@@ -91,7 +91,7 @@
                 src="@/assets/images/schedule/202510.jpg"
                 class="img-responsive"
                 loading="lazy"
-                alt="Free HTML5 Templates by FREEHTML5.co"
+                alt="営業カレンダー(10月)"
               >
             </figure>
           </div>
@@ -271,7 +271,7 @@
                       <img
                         src="@/assets/images/pan/036.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="海老マヨフォカッチャ"
                       >
                     </figure>
                     <div>
@@ -286,7 +286,7 @@
                       <img
                         src="@/assets/images/pan/037.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="つるしベーコンとトマトのピザ"
                       >
                     </figure>
                     <div>
@@ -301,7 +301,7 @@
                       <img
                         src="@/assets/images/pan/016.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="タルタルチキン"
                       >
                     </figure>
                     <div>
@@ -316,7 +316,7 @@
                       <img
                         src="@/assets/images/pan/038.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="いぶりがっこポテトサラダ"
                       >
                     </figure>
                     <div>
@@ -331,7 +331,7 @@
                       <img
                         src="@/assets/images/pan/025.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="クロックムッシュ"
                       >
                     </figure>
                     <div>
@@ -346,7 +346,7 @@
                       <img
                         src="@/assets/images/pan/017.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="塩パン"
                       >
                     </figure>
                     <div>
@@ -368,7 +368,7 @@
                       <img
                         src="@/assets/images/pan/012.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="季節フルーツのデニッシュタルト"
                       >
                     </figure>
                     <div>
@@ -383,7 +383,7 @@
                       <img
                         src="@/assets/images/pan/018.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="ティラミスロール"
                       >
                     </figure>
                     <div>
@@ -398,7 +398,7 @@
                       <img
                         src="@/assets/images/pan/027.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="シナモンロール"
                       >
                     </figure>
                     <div>
@@ -413,7 +413,7 @@
                       <img
                         src="@/assets/images/pan/026.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="フェアリーパン"
                       >
                     </figure>
                     <div>
@@ -428,7 +428,7 @@
                       <img
                         src="@/assets/images/pan/010.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="クリームパン"
                       >
                     </figure>
                     <div>
@@ -443,7 +443,7 @@
                       <img
                         src="@/assets/images/pan/013.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="無花果ブルー"
                       >
                     </figure>
                     <div>
@@ -465,7 +465,7 @@
                       <img
                         src="@/assets/images/pan/030.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="ガーリックたまごサンド、ツナとドライトマトのサンド、ミックスサンド"
                       >
                     </figure>
                     <div>
@@ -480,7 +480,7 @@
                       <img
                         src="@/assets/images/pan/032.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="大人のラムレーズンサンド"
                       >
                     </figure>
                     <div>
@@ -495,7 +495,7 @@
                       <img
                         src="@/assets/images/pan/028.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="あんバターサンド"
                       >
                     </figure>
                     <div>
@@ -517,7 +517,7 @@
                       <img
                         src="@/assets/images/pan/004.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="食パン"
                       >
                     </figure>
                     <div>
@@ -532,7 +532,7 @@
                       <img
                         src="@/assets/images/pan/031.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="全粒粉のカンパーニュ"
                       >
                     </figure>
                     <div>
@@ -547,7 +547,7 @@
                       <img
                         src="@/assets/images/pan/020.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="コーヒーキャラメルカンパーニュ"
                       >
                     </figure>
                     <div>
@@ -562,7 +562,7 @@
                       <img
                         src="@/assets/images/pan/022.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="無花果とアールグレイのカンパーニュ"
                       >
                     </figure>
                     <div>
@@ -586,7 +586,7 @@
                       <img
                         src="@/assets/images/pan/029.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="クランベリーチョコマフィン"
                       >
                     </figure>
                     <div>
@@ -602,7 +602,7 @@
                       <img
                         src="@/assets/images/pan/039.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="フロランタン"
                       >
                     </figure>
                     <div>
@@ -617,7 +617,7 @@
                       <img
                         src="@/assets/images/pan/015.jpg"
                         class="img-responsive"
-                        alt="Free HTML5 Templates by FREEHTML5.co"
+                        alt="キャロットケーキ"
                       >
                     </figure>
                     <div>
