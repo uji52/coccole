@@ -21,6 +21,11 @@ var jumpToCode = (function init() {
 
     var currentIndex;
 
+    /**
+     * Move the 'highlighted' marker to the element at the given index.
+     * Removes the 'highlighted' class from the element at `currentIndex` (if present) and adds it to the element at `index`.
+     * @param {number} index - Index within `missingCoverageElements` of the element to highlight.
+     */
     function toggleClass(index) {
         missingCoverageElements
             .item(currentIndex)
@@ -28,6 +33,12 @@ var jumpToCode = (function init() {
         missingCoverageElements.item(index).classList.add('highlighted');
     }
 
+    /**
+     * Set the given missing-coverage element as the active item and bring it into view.
+     * 
+     * Updates the highlighted element, sets the internal current index, and scrolls the element at the provided index into view centered in the viewport with a smooth animation.
+     * @param {number} index - Zero-based index of the element within the internal list of missing coverage elements.
+     */
     function makeCurrent(index) {
         toggleClass(index);
         currentIndex = index;
@@ -38,6 +49,11 @@ var jumpToCode = (function init() {
         });
     }
 
+    /**
+     * Move the highlight to the previous missing-coverage element and make it current.
+     *
+     * Wraps to the last element if there is no current selection or the selection is at the first element.
+     */
     function goToPrevious() {
         var nextIndex = 0;
         if (typeof currentIndex !== 'number' || currentIndex === 0) {
@@ -49,6 +65,11 @@ var jumpToCode = (function init() {
         makeCurrent(nextIndex);
     }
 
+    /**
+     * Advance the highlighted selection to the next missing-coverage element, wrapping to the first when at the end.
+     *
+     * Updates the highlighted element and scrolls the newly selected element into view (centered).
+     */
     function goToNext() {
         var nextIndex = 0;
 
