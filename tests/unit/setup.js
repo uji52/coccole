@@ -5,16 +5,16 @@ import { config } from '@vue/test-utils'
 config.global.components = {
   'router-link': {
     name: 'RouterLink',
-    template: '<a><slot/></a>'
-  }
+    template: '<a><slot/></a>',
+  },
 }
 
 // グローバルプロパティの設定
 // $routeをモックし、ルートパラメータへのアクセスを可能化
 config.global.mocks = {
   $route: {
-    params: {}
-  }
+    params: {},
+  },
 }
 
 // テスト環境のセットアップ

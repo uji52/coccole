@@ -4,16 +4,9 @@
       <div class="container">
         <div class="row row-padded">
           <div class="col-md-12 text-center">
-            <p class="to-animate">
-              &copy; 2022 Coccole.
-            </p>
+            <p class="to-animate">&copy; 2022 Coccole.</p>
             <p class="text-center to-animate">
-              <a
-                href="#"
-                class="js-gotop"
-              >
-                Go To Top
-              </a>
+              <a href="#" class="js-gotop"> Go To Top </a>
             </p>
           </div>
         </div>
@@ -22,7 +15,9 @@
             <ul class="fh5co-social">
               <li class="to-animate-2">
                 <a href="https://Instagram.com/coccole0909">
-                  <FontAwesome :icon="{ prefix: 'fab', iconName: 'instagram' }" />
+                  <FontAwesome
+                    :icon="{ prefix: 'fab', iconName: 'instagram' }"
+                  />
                 </a>
               </li>
               <li class="to-animate-2">
@@ -46,8 +41,8 @@ export default {
       type: String,
       required: true,
       default: 'Message',
-    }
-  }
+    },
+  },
 }
 </script>
 

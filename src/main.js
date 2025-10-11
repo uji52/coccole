@@ -23,5 +23,5 @@ library.add(faInstagram)
 library.add(faLine)
 
 var app = createApp(App)
-app.component('FontAwesome', FontAwesomeIcon )
+app.component('FontAwesome', FontAwesomeIcon)
 app.mount('#app')
