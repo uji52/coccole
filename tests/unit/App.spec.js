@@ -55,4 +55,77 @@ describe('App.vue', () => {
     expect(wrapper.vm.$options.components).toHaveProperty('CoccoleMain');
     expect(wrapper.vm.$options.components).toHaveProperty('CoccoleFoot');
   });
+
+  it('handles missing components gracefully', () => {
+    // Mock console.error to prevent error output during test
+    const originalConsoleError = console.error;
+    console.error = jest.fn();
+
+    const unavailableComponent = {
+      name: 'UnavailableComponent',
+      template: '<div></div>'
+    };
+    
+    const wrapper = shallowMount(App, {
+      stubs: {
+        CoccoleHead: unavailableComponent,
+        CoccoleMain: unavailableComponent,
+        CoccoleFoot: unavailableComponent
+      }
+    });
+
+    // コンポーネントが存在しない場合でもエラーを発生させずにレンダリングされることを確認
+    expect(wrapper.exists()).toBe(true);
+    expect(() => wrapper.vm.$forceUpdate()).not.toThrow();
+
+    // Restore console.error
+    console.error = originalConsoleError;
+  });
+
+  it('renders with different msg prop values', () => {
+    const mockHead = jest.fn();
+    const mockMain = jest.fn();
+    const mockFoot = jest.fn();
+
+    const wrapper = shallowMount(App, {
+      global: {
+        stubs: {
+          CoccoleHead: {
+            name: 'CoccoleHead',
+            template: '<div class="mockedHead"></div>',
+            props: ['msg'],
+            setup(props) {
+              mockHead(props.msg);
+            }
+          },
+          CoccoleMain: {
+            name: 'CoccoleMain',
+            template: '<div class="mockedMain"></div>',
+            props: ['msg'],
+            setup(props) {
+              mockMain(props.msg);
+            }
+          },
+          CoccoleFoot: {
+            name: 'CoccoleFoot',
+            template: '<div class="mockedFoot"></div>',
+            props: ['msg'],
+            setup(props) {
+              mockFoot(props.msg);
+            }
+          }
+        }
+      }
+    });
+
+    // デフォルト値の確認
+    expect(mockHead).toHaveBeenCalledWith('coccole');
+    expect(mockMain).toHaveBeenCalledWith('main');
+    expect(mockFoot).toHaveBeenCalledWith('2022');
+
+    // コンポーネントが存在することを確認
+    expect(wrapper.findComponent({ name: 'CoccoleHead' }).exists()).toBe(true);
+    expect(wrapper.findComponent({ name: 'CoccoleMain' }).exists()).toBe(true);
+    expect(wrapper.findComponent({ name: 'CoccoleFoot' }).exists()).toBe(true);
+  });
 })

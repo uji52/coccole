@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "lint:css": "stylelint \"src/**/*.scss\"",
     "test:unit": "jest",
-    "format": "prettier --write src/",
+    "format": "prettier --write src/ tests/",
     "format:css": "prettier --write \"src/**/*.scss\" && stylelint --fix \"src/**/*.scss\""
   },
   "dependencies": {
