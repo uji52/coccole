@@ -1,10 +1,6 @@
 <template>
   <div id="fh5co-container">
-    <div
-      id="fh5co-home"
-      class="js-fullheight"
-      data-section="home"
-    >
+    <div id="fh5co-home" class="js-fullheight" data-section="home">
       <div class="flexslider">
         <div class="fh5co-overlay" />
         <div class="fh5co-text">
@@ -16,8 +12,8 @@
                   class="img-responsive"
                   alt="Coccole"
                   role="img"
-                  aria-label="Coccoleロゴ"                  
-                >
+                  aria-label="Coccoleロゴ"
+                />
               </h1>
             </div>
           </div>
@@ -45,17 +41,17 @@
 </template>
 
 <script>
-import shopExterior  from '@/assets/images/shop/Shop_003.jpg';
-import shopInterior from '@/assets/images/shop/Shop_002.jpg';
-import sampleItem from '@/assets/images/pan/002.jpg';
+import shopExterior from '@/assets/images/shop/Shop_003.jpg'
+import shopInterior from '@/assets/images/shop/Shop_002.jpg'
+import sampleItem from '@/assets/images/pan/002.jpg'
 
 export default {
   name: 'CoccoleHead',
   props: {
     msg: {
       type: String,
-      default: 'Message'
-    }
+      default: 'Message',
+    },
   },
   data() {
     return {
@@ -63,14 +59,14 @@ export default {
         shopExterior,
         shopInterior,
         sampleItem,
-      }
-    };
+      },
+    }
   },
   methods: {
     handleImageError(imageName, error) {
-      console.error(`画像「${imageName}」の読み込みに失敗しました:`, error);
-    }
-  }
+      console.error(`画像「${imageName}」の読み込みに失敗しました:`, error)
+    },
+  },
 }
 </script>
 

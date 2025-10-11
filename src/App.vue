@@ -15,13 +15,13 @@ export default {
     CoccoleHead,
     CoccoleMain,
     CoccoleFoot,
-  }
+  },
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Merriweather,serif;
+  font-family: Merriweather, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

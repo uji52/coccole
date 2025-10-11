@@ -8,6 +8,12 @@ export default defineConfig(async () => {
   const { imagetools } = await import('vite-imagetools');
 
   return {
+    base: './',
+    server: {
+      port: 3000,
+      strictPort: true,
+      host: true
+    },
     plugins: [
       vue(),
       /*
@@ -47,8 +53,31 @@ export default defineConfig(async () => {
       target: 'esnext',
       minify: 'terser',
       cssCodeSplit: true,
+      assetsDir: 'assets',
+      copyPublicDir: true,
+      outDir: 'dist',
       rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html')
+        },
         output: {
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          entryFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: ({name}) => {
+            if (/\.(jpe?g|png|gif|ico|svg)$/.test(name)) {
+              return 'assets/images/[name]-[hash][extname]'
+            }
+            if (/\.(woff2?|eot|ttf)$/.test(name)) {
+              return 'assets/fonts/[name]-[hash][extname]'
+            }
+            if (/\.css$/.test(name)) {
+              return 'assets/css/[name]-[hash][extname]'
+            }
+            if (/\.(js|map)$/.test(name)) {
+              return 'assets/js/[name][extname]'
+            }
+            return 'assets/[ext]/[name]-[hash].[ext]'
+          },
           manualChunks: {
             'vue-core': ['vue'],
             'fontawesome': ['@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/vue-fontawesome'],
