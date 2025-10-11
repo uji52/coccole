@@ -12,6 +12,13 @@ reviews:
         - "!coverage/**"
         - "!*.lock"
     path_instructions:
+        - path: "**/*"
+          instructions: |
+            以下の点について、レビューを行ってください：
+            - コードの品質
+            - セキュリティ上の問題
+            - パフォーマンスの考慮
+            ただし、PRのタイトルが "AutoPR: " で始まる場合は、タイトルの形式に関する指摘は行わないでください。
         - path: "**/*.js"
           instructions: |
             以下の点に注意してJavaScriptコードをレビューしてください：
