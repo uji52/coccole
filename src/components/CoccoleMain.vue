@@ -48,33 +48,23 @@
               営業スケジュールは下記の予定です。
             </p>
           </div>
-          <div class="col-md-4">
-            <figure>
-              <img
-                src="@/assets/images/schedule/202510.jpg"
-                class="img-responsive"
-                loading="lazy"
-                alt="営業カレンダー(9月)"
-              />
-            </figure>
-          </div>
-          <div class="col-md-4">
-            <figure>
-              <img
-                src="@/assets/images/schedule/202511.jpg"
-                class="img-responsive"
-                loading="lazy"
-                alt="営業カレンダー(10月)"
-              />
-            </figure>
-          </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <figure>
               <img
                 src="@/assets/images/schedule/202512.jpg"
                 class="img-responsive"
                 loading="lazy"
                 alt="営業カレンダー(10月)"
+              />
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img
+                src="@/assets/images/schedule/202601.jpg"
+                class="img-responsive"
+                loading="lazy"
+                alt="営業カレンダー(1月)"
               />
             </figure>
           </div>
