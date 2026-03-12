@@ -1,0 +1,19 @@
+{
+  "reviews": {
+    "review_status": true,
+    "request_changes": false
+  },
+  "rules": [
+    {
+      "type": "pattern",
+      "pattern": "dependabot",
+      "nit": false,
+      "instructions": "Skip template and documentation checks for Dependabot PRs"
+    }
+  ],
+  "language": "ja",
+  "skip_reviewers": true,
+  "comment_skip_rules": [
+    "pull_request_template_check"
+  ]
+}
