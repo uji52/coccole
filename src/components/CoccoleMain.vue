@@ -51,20 +51,20 @@
           <div class="col-md-6">
             <figure>
               <img
-                src="@/assets/images/schedule/202602.jpg"
+                src="@/assets/images/schedule/202603.jpg"
                 class="img-responsive"
                 loading="lazy"
-                alt="営業カレンダー(2月)"
+                alt="営業カレンダー(3月)"
               />
             </figure>
           </div>
           <div class="col-md-6">
             <figure>
               <img
-                src="@/assets/images/schedule/202603.jpg"
+                src="@/assets/images/schedule/202604.jpg"
                 class="img-responsive"
                 loading="lazy"
-                alt="営業カレンダー(3月)"
+                alt="営業カレンダー(4月)"
               />
             </figure>
           </div>
