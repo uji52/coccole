@@ -15,6 +15,7 @@
     "format:css": "prettier --write \"src/**/*.scss\" && stylelint --fix \"src/**/*.scss\""
   },
   "dependencies": {
+    "17": "^0.0.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
@@ -48,7 +49,7 @@
     "prettier": "^3.4.2",
     "rollup-plugin-visualizer": "^5.14.0",
     "sass-embedded": "^1.83.4",
-    "stylelint": "^16.14.1",
+    "stylelint": "^17.4.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-scss": "^7.0.0",
