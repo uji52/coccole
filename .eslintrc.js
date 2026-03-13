@@ -1,12 +1,14 @@
 module.exports = {
   extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:vue/vue3-strongly-recommended',
     'plugin:vue/vue3-essential',
+    'eslint:recommended'
   ],
   globals: {
     $: 'readonly',
     jQuery: 'readonly',
+  },
+  parserOptions: {
+    parser: '@babel/eslint-parser'
   },
   rules: {
     'vue/multi-word-component-names': ['error', {
