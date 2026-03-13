@@ -15,7 +15,7 @@
     "format:css": "prettier --write \"src/**/*.scss\" && stylelint --fix \"src/**/*.scss\""
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "github:fortawesome/vue-fontawesome",
