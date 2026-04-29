@@ -9,11 +9,14 @@
       "pattern": "dependabot",
       "nit": false,
       "instructions": "Skip template and documentation checks for Dependabot PRs"
+    },
+    {
+      "type": "pattern",
+      "pattern": "AutoPR:",
+      "instructions": "Code review requested, but skip pull request template format checks",
+      "comment_skip_rules": ["pull_request_template_check"]
     }
   ],
   "language": "ja",
-  "skip_reviewers": true,
-  "comment_skip_rules": [
-    "pull_request_template_check"
-  ]
+  "skip_reviewers": true
 }
