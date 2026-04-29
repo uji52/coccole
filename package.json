@@ -8,7 +8,7 @@
     "build": "vite build",
     "local-deploy": "npm run build;rm -rf /var/www/html/test/*;cp -rp dist/* /var/www/html/test/",
     "depcheck": "depcheck --ignores=file-loader,url-loader,image-webpack-loader",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
     "lint:css": "stylelint \"src/**/*.scss\"",
     "test:unit": "jest",
     "format": "prettier --write src/ tests/",

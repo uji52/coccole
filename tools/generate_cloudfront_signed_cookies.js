@@ -72,7 +72,7 @@ function makePolicy(resource, expireEpoch, ipCidr) {
   return JSON.stringify(stmt);
 }
 
-function signPolicy(policyStr, privateKey) {
+function signPolicy(policyStr, privateKey) { // eslint-disable-line no-unused-vars
   // Use RSA-SHA1 for compatibility with CloudFront signed-cookie examples
   const signer = crypto.createSign('RSA-SHA1');
   signer.update(policyStr);
