@@ -1,19 +1,53 @@
 module.exports = {
+  root: true,
+  parser: '@babel/eslint-parser',
+  env: {
+    node: true,
+    browser: true,
+    es2021: true
+  },
   extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:vue/vue3-strongly-recommended',
-    'plugin:vue/vue3-essential',
+    'eslint:recommended'
   ],
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 2021
+  },
   globals: {
     $: 'readonly',
     jQuery: 'readonly',
   },
+  ignorePatterns: [
+    'src/assets/**',
+    'public/assets/**',
+    'public/js/**',
+    'dist/**',
+    'coverage/**',
+    'node_modules/**'
+  ],
+  overrides: [
+    {
+      files: ['**/*.vue'],
+      parser: 'vue-eslint-parser',
+      extends: ['plugin:vue/vue3-essential'],
+      parserOptions: {
+        parser: '@babel/eslint-parser',
+        sourceType: 'module',
+        ecmaVersion: 2021
+      }
+    },
+    {
+      files: ['tests/**/*.js'],
+      env: {
+        jest: true
+      },
+      globals: {
+        jest: 'readonly'
+      }
+    }
+  ],
   rules: {
-    'vue/multi-word-component-names': ['error', {
-      ignores: ['fa'],
-    }],
-    'vue/no-unused-vars': 'warn',
     'quotes': ['warn', 'single'],
-    'vue/no-multiple-template-root': 'off',
+    'no-unused-vars': 'warn'
   }
 }

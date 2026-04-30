@@ -1,4 +1,4 @@
-language: "ja" # 日本語でコメントを行う
+language: "ja"
 early_access: true
 reviews:
     request_changes_workflow: true
@@ -56,5 +56,16 @@ reviews:
             - "!master"
             - "!hotfix/.*"
             - "!release/.*"
+rules:
+    - type: pattern
+      pattern: "dependabot"
+      nit: false
+      instructions: "Dependabotのプルリクエストについては、テンプレートとドキュメントのチェックをスキップしてください"
+    - type: pattern
+      pattern: "AutoPR:"
+      instructions: "コードレビューを実施してください。ただし、プルリクエストテンプレートの形式チェックはスキップしてください"
+      comment_skip_rules:
+          - "pull_request_template_check"
 chat:
     auto_reply: true
+skip_reviewers: true
