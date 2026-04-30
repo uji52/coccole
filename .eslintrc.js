@@ -29,7 +29,6 @@ module.exports = {
     {
       files: ['**/*.vue'],
       parser: 'vue-eslint-parser',
-      plugins: ['vue'],
       extends: ['plugin:vue/vue3-essential'],
       parserOptions: {
         parser: '@babel/eslint-parser',
