@@ -6,7 +6,6 @@ reviews:
     poem: false
     review_status: true
     collapse_walkthrough: true
-    request_changes: false
     path_filters:
         - "!**/*.xml"
         - "!dist/**"

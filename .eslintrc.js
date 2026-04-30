@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  parser: '@babel/eslint-parser',
   env: {
     node: true,
     browser: true,
@@ -9,7 +10,6 @@ module.exports = {
     'eslint:recommended'
   ],
   parserOptions: {
-    parser: '@babel/eslint-parser',
     sourceType: 'module',
     ecmaVersion: 2021
   },
@@ -29,6 +29,7 @@ module.exports = {
     {
       files: ['**/*.vue'],
       parser: 'vue-eslint-parser',
+      extends: ['plugin:vue/recommended'],
       parserOptions: {
         parser: '@babel/eslint-parser',
         sourceType: 'module',
