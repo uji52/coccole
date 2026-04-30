@@ -29,7 +29,7 @@ module.exports = {
     {
       files: ['**/*.vue'],
       parser: 'vue-eslint-parser',
-      extends: ['plugin:vue/vue3-recommended'],
+      extends: ['plugin:vue/vue3-essential'],
       parserOptions: {
         parser: '@babel/eslint-parser',
         sourceType: 'module',
