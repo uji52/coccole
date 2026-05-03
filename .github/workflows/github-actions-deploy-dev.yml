@@ -22,7 +22,8 @@ jobs:
       github.event_name == 'push' ||
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
-       contains(github.event.comment.body, '/deploy'))
+       contains(github.event.comment.body, '/deploy') &&
+       (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER'))
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository code
@@ -50,7 +51,8 @@ jobs:
       github.event_name == 'push' ||
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
-       contains(github.event.comment.body, '/deploy'))
+       contains(github.event.comment.body, '/deploy') &&
+       (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER'))
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository code
@@ -70,7 +72,8 @@ jobs:
       github.event_name == 'push' ||
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
-       contains(github.event.comment.body, '/deploy'))
+       contains(github.event.comment.body, '/deploy') &&
+       (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER'))
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository code
