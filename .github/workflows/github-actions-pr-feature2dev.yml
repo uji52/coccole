@@ -16,7 +16,7 @@ jobs:
 
       - name: Get Last Commit Message
         id: get_commit_message
-        run: echo "MESSAGE=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+        run: echo "MESSAGE=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
         env:
