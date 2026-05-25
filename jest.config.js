@@ -19,4 +19,4 @@ module.exports = {
     customExportConditions: ['node', 'node-addons']
   },
   setupFiles: ['<rootDir>/tests/unit/setup.js']
-}
+};
