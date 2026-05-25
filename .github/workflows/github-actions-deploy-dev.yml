@@ -37,6 +37,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
         with:
+          persist-credentials: false
           ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
 
       - name: Check nodejs version
@@ -69,6 +70,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
         with:
+          persist-credentials: false
           ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
 
       - name: Install Dependencies
