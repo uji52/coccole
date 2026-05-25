@@ -20,8 +20,8 @@ export default {
     // Suppress "[Intervention] Ignored attempt to cancel a touchmove event" warning
     // Mark touchmove and touchstart as passive to allow browser optimization
     if (document.addEventListener) {
-      document.addEventListener('touchmove', function() {}, { passive: true })
-      document.addEventListener('touchstart', function() {}, { passive: true })
+      document.addEventListener('touchmove', function () {}, { passive: true })
+      document.addEventListener('touchstart', function () {}, { passive: true })
     }
   },
 }

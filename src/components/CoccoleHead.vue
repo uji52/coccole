@@ -1,10 +1,6 @@
 <template>
   <div id="fh5co-container">
-    <div
-      id="fh5co-home"
-      class="js-fullheight"
-      data-section="home"
-    >
+    <div id="fh5co-home" class="js-fullheight" data-section="home">
       <div class="flexslider">
         <div class="fh5co-overlay" />
         <div class="fh5co-text">
@@ -17,7 +13,7 @@
                   alt="Coccole"
                   role="img"
                   aria-label="Coccoleロゴ"
-                >
+                />
               </h1>
             </div>
           </div>

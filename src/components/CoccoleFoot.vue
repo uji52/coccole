@@ -4,14 +4,9 @@
       <div class="container">
         <div class="row row-padded">
           <div class="col-md-12 text-center">
-            <p class="to-animate">
-              &copy; 2022 Coccole.
-            </p>
+            <p class="to-animate">&copy; 2022 Coccole.</p>
             <p class="text-center to-animate">
-              <a
-                href="#"
-                class="js-gotop"
-              > Go To Top </a>
+              <a href="#" class="js-gotop"> Go To Top </a>
             </p>
           </div>
         </div>
