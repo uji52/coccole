@@ -6,13 +6,17 @@ on:
       - dependabot/**
   issue_comment:
     types: [created, edited]
-  
+  pull_request_review_comment:
+    types: [created, edited]
+
 jobs:
   CheckDeployComment:
     if: |
-      github.event_name == 'issue_comment' &&
-      github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/deploy')
+      (github.event_name == 'issue_comment' &&
+       github.event.issue.pull_request &&
+       contains(github.event.comment.body, '/deploy')) ||
+      (github.event_name == 'pull_request_review_comment' &&
+       contains(github.event.comment.body, '/deploy'))
     runs-on: ubuntu-24.04
     steps:
       - name: Check deployment request
@@ -24,13 +28,16 @@ jobs:
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
        contains(github.event.comment.body, '/deploy') &&
+       (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER')) ||
+      (github.event_name == 'pull_request_review_comment' &&
+       contains(github.event.comment.body, '/deploy') &&
        (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER'))
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository code
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || '' }}
+          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
 
       - name: Check nodejs version
         run: node -v
@@ -53,13 +60,16 @@ jobs:
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
        contains(github.event.comment.body, '/deploy') &&
+       (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER')) ||
+      (github.event_name == 'pull_request_review_comment' &&
+       contains(github.event.comment.body, '/deploy') &&
        (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER'))
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository code
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || '' }}
+          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
 
       - name: Install Dependencies
         run: npm install
@@ -74,13 +84,16 @@ jobs:
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
        contains(github.event.comment.body, '/deploy') &&
+       (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER')) ||
+      (github.event_name == 'pull_request_review_comment' &&
+       contains(github.event.comment.body, '/deploy') &&
        (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'MEMBER'))
     runs-on: ubuntu-24.04
     steps:
       - name: Check out repository code
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || '' }}
+          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
 
       - name: Install Dependencies
         run: npm install
