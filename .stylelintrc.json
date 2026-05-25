@@ -17,12 +17,6 @@
     ]
   },
   "ignoreFiles": [
-    "src/assets/sass/bootstrap/**/*.scss",
-    "src/assets/sass/bootstrap-compass.scss",
-    "src/assets/sass/_bootstrap-mincer.scss",
-    "src/assets/sass/_bootstrap-sprockets.scss",
-    "src/assets/sass/blue.scss",
-    "src/assets/sass/bootstrap.scss",
-    "src/assets/sass/style.scss"
+    "src/assets/**"
   ]
 }

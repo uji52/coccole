@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import CoccoleHead from './components/CoccoleHead.vue'
-import CoccoleMain from './components/CoccoleMain.vue'
-import CoccoleFoot from './components/CoccoleFoot.vue'
+import CoccoleHead from './components/CoccoleHead.vue';
+import CoccoleMain from './components/CoccoleMain.vue';
+import CoccoleFoot from './components/CoccoleFoot.vue';
 
 export default {
   name: 'App',
@@ -20,11 +20,11 @@ export default {
     // Suppress "[Intervention] Ignored attempt to cancel a touchmove event" warning
     // Mark touchmove and touchstart as passive to allow browser optimization
     if (document.addEventListener) {
-      document.addEventListener('touchmove', function() {}, { passive: true })
-      document.addEventListener('touchstart', function() {}, { passive: true })
+      document.addEventListener('touchmove', function () {}, { passive: true });
+      document.addEventListener('touchstart', function () {}, { passive: true });
     }
   },
-}
+};
 </script>
 
 <style lang="scss">

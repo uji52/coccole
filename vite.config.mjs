@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { visualizer } from 'rollup-plugin-visualizer'
-import path from 'path'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import { visualizer } from 'rollup-plugin-visualizer';
+import path from 'path';
 
 export default defineConfig(async () => {
   const { imagetools } = await import('vite-imagetools');
@@ -57,18 +57,18 @@ export default defineConfig(async () => {
           entryFileNames: 'assets/js/[name]-[hash].js',
           assetFileNames: ({name}) => {
             if (/\.(jpe?g|png|gif|ico|svg)$/.test(name)) {
-              return 'assets/images/[name]-[hash][extname]'
+              return 'assets/images/[name]-[hash][extname]';
             }
             if (/\.(woff2?|eot|ttf)$/.test(name)) {
-              return 'assets/fonts/[name]-[hash][extname]'
+              return 'assets/fonts/[name]-[hash][extname]';
             }
             if (/\.css$/.test(name)) {
-              return 'assets/css/[name]-[hash][extname]'
+              return 'assets/css/[name]-[hash][extname]';
             }
             if (/\.(js|map)$/.test(name)) {
-              return 'assets/js/[name][extname]'
+              return 'assets/js/[name][extname]';
             }
-            return 'assets/[ext]/[name]-[hash].[ext]'
+            return 'assets/[ext]/[name]-[hash].[ext]';
           },
           manualChunks: {
             'vue-core': ['vue'],

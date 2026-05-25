@@ -1,17 +1,20 @@
 module.exports = {
   root: true,
-  parser: '@babel/eslint-parser',
   env: {
     node: true,
     browser: true,
     es2021: true
   },
   extends: [
-    'eslint:recommended'
+    'eslint:recommended',
+    'plugin:vue/vue3-essential'
   ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
+    parser: '@babel/eslint-parser',
     sourceType: 'module',
-    ecmaVersion: 2021
+    ecmaVersion: 2021,
+    requireConfigFile: false
   },
   globals: {
     $: 'readonly',
@@ -27,16 +30,6 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['**/*.vue'],
-      parser: 'vue-eslint-parser',
-      extends: ['plugin:vue/vue3-essential'],
-      parserOptions: {
-        parser: '@babel/eslint-parser',
-        sourceType: 'module',
-        ecmaVersion: 2021
-      }
-    },
-    {
       files: ['tests/**/*.js'],
       env: {
         jest: true
@@ -48,6 +41,7 @@ module.exports = {
   ],
   rules: {
     'quotes': ['warn', 'single'],
-    'no-unused-vars': 'warn'
+    'semi': ['warn', 'always'],
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }]
   }
-}
+};
