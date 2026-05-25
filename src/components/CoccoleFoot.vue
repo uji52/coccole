@@ -43,7 +43,7 @@ export default {
       default: 'Message',
     },
   },
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

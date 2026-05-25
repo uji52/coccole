@@ -691,12 +691,12 @@
 </template>
 
 <script>
-import pan1 from '@/assets/images/pan/003.jpg'
-import pan2 from '@/assets/images/pan/004.jpg'
-import pan3 from '@/assets/images/pan/035.jpg'
-import pan4 from '@/assets/images/pan/006.jpg'
-import pan5 from '@/assets/images/pan/010.jpg'
-import pan6 from '@/assets/images/pan/012.jpg'
+import pan1 from '@/assets/images/pan/003.jpg';
+import pan2 from '@/assets/images/pan/004.jpg';
+import pan3 from '@/assets/images/pan/035.jpg';
+import pan4 from '@/assets/images/pan/006.jpg';
+import pan5 from '@/assets/images/pan/010.jpg';
+import pan6 from '@/assets/images/pan/012.jpg';
 
 export default {
   name: 'CoccoleMain',
@@ -716,14 +716,14 @@ export default {
         pan5,
         pan6,
       },
-    }
+    };
   },
   methods: {
     handleImageError(imageName, error) {
-      console.error(`画像「${imageName}」の読み込みに失敗しました:`, error)
+      console.error(`画像「${imageName}」の読み込みに失敗しました:`, error);
     },
   },
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

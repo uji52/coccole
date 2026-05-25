@@ -31,3 +31,9 @@ npm run test:unit    # すべてのテストを実行（ビルド検証を含む
 ### Vueに関する補足
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### プルリクルール
+
+* 基本AI指摘には対応する
+* `@coderabbitai review` とコメントするとAIレビューが入る
+* `/deploy` とコメントすると、テストとDevへのデプロイが走る
