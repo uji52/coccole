@@ -53,7 +53,7 @@
     "stylelint-scss": "^7.0.0",
     "terser": "^5.46.2",
     "vite": "^6.4.2",
-    "vite-imagetools": "^7.0.5",
+    "vite-imagetools": "^10.0.0",
     "vite-plugin-compression": "^0.5.1"
   },
   "browserslist": [
