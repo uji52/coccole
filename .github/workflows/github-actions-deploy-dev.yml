@@ -1,9 +1,12 @@
-name: Deploy Dev
+﻿name: Deploy Dev
 on:
   push:
     branches:
       - feature/*
       - dependabot/**
+  pull_request:
+    branches:
+      - develop
   issue_comment:
     types: [created, edited]
   pull_request_review_comment:
@@ -24,7 +27,8 @@ jobs:
 
   Lint:
     if: |
-      (github.event_name == 'push' && !contains(github.ref, 'dependabot')) ||
+      (github.event_name == 'push') ||
+      (github.event_name == 'pull_request') ||
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
        contains(github.event.comment.body, '/deploy') &&
@@ -57,7 +61,8 @@ jobs:
 
   UnitTest:
     if: |
-      (github.event_name == 'push' && !contains(github.ref, 'dependabot')) ||
+      (github.event_name == 'push') ||
+      (github.event_name == 'pull_request') ||
       (github.event_name == 'issue_comment' &&
        github.event.issue.pull_request &&
        contains(github.event.comment.body, '/deploy') &&
@@ -101,19 +106,17 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build  # Vue ビルド
+        run: npm run build
 
-      - name: Deploy  # S3にデプロイ 
+      - name: Deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: aws s3 cp --recursive --region ap-northeast-1 dist s3://coccole-content-dev
 
-      - name: Invalidation  # CF Invalidation
+      - name: Invalidation
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ap-northeast-1
-        run:
-          aws cloudfront create-invalidation --distribution-id E3B1AU20ZIZCDY --paths "/*"
-
+        run: aws cloudfront create-invalidation --distribution-id E3B1AU20ZIZCDY --paths "/*"
