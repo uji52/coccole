@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
+          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || github.ref }}
 
       - name: Check nodejs version
         run: node -v
@@ -76,7 +76,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           persist-credentials: false
-          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
+          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || github.ref }}
 
       - name: Install Dependencies
         run: npm install
@@ -100,7 +100,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || '' }}
+          ref: ${{ github.event_name == 'issue_comment' && format('refs/pull/{0}/head', github.event.issue.number) || github.event_name == 'pull_request_review_comment' && format('refs/pull/{0}/head', github.event.pull_request.number) || github.ref }}
 
       - name: Install Dependencies
         run: npm install
@@ -120,3 +120,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ap-northeast-1
         run: aws cloudfront create-invalidation --distribution-id E3B1AU20ZIZCDY --paths "/*"
+
