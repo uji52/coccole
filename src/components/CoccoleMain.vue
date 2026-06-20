@@ -54,7 +54,7 @@
                 src="@/assets/images/schedule/202607.jpg"
                 class="img-responsive"
                 loading="lazy"
-                alt="営業カレンダー(4月)"
+                alt="営業カレンダー(7月)"
               />
             </figure>
           </div>
