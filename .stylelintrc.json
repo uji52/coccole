@@ -17,6 +17,8 @@
     ]
   },
   "ignoreFiles": [
-    "src/assets/**"
+    "src/assets/**",
+    "src/assets/sass/**",
+    "src/assets/fonts/bootstrap/**"
   ]
 }
