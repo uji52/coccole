@@ -117,7 +117,13 @@
 
   // Parallax
   var parallax = function () {
-    $(window).stellar()
+    try {
+      if (typeof $.fn.stellar === 'function') {
+        $(window).stellar()
+      }
+    } catch (error) {
+      console.warn('Parallax initialization skipped:', error)
+    }
   }
 
   // Burger Menu

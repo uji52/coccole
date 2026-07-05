@@ -2,11 +2,21 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { visualizer } from 'rollup-plugin-visualizer';
 import path from 'path';
+import fs from 'fs';
 import * as sass from 'sass-embedded';
 
 export default defineConfig(async () => {
   process.env.SASS_SILENCE_DEPRECATIONS = 'all';
   const { imagetools } = await import('vite-imagetools');
+
+  const legacyJsFiles = [
+    'src/assets/js/bootstrap.min.js',
+    'src/assets/js/bootstrap-datetimepicker.min.js',
+    'src/assets/js/main.js',
+    'src/assets/js/jquery.easing.1.3.js',
+    'src/assets/js/jquery.waypoints.min.js',
+    'src/assets/js/jquery.flexslider-min.js'
+  ];
 
   return {
     base: './',
@@ -19,7 +29,21 @@ export default defineConfig(async () => {
     plugins: [
       vue(),
       imagetools(),
-      process.env.ANALYZE ? visualizer({ open: true }) : null
+      process.env.ANALYZE ? visualizer({ open: true }) : null,
+      {
+        name: 'copy-legacy-js',
+        closeBundle() {
+          const outDir = path.resolve(__dirname, 'dist/js');
+          fs.mkdirSync(outDir, { recursive: true });
+          legacyJsFiles.forEach((file) => {
+            const source = path.resolve(__dirname, file);
+            const target = path.join(outDir, path.basename(file));
+            if (fs.existsSync(source)) {
+              fs.copyFileSync(source, target);
+            }
+          });
+        }
+      }
     ].filter(Boolean),
     resolve: {
       alias: {
