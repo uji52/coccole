@@ -50,7 +50,7 @@
     "sass-embedded": "^1.99.0",
     "stylelint": "^17.4.0",
     "stylelint-config-recommended-scss": "^17.0.1",
-    "stylelint-scss": "^7.0.0",
+    "stylelint-scss": "^7.2.0",
     "terser": "^5.46.2",
     "vite": "^6.4.2",
     "vite-imagetools": "^7.0.5",
