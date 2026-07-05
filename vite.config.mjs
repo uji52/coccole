@@ -93,11 +93,19 @@ export default defineConfig(async () => {
             }
             return 'assets/[ext]/[name]-[hash].[ext]';
           },
-          manualChunks: {
-            'vue-core': ['vue'],
-            'fontawesome': ['@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/vue-fontawesome'],
-            'style': ['bootstrap'],
-            'utils': ['moment', 'axios'],
+          manualChunks(id) {
+            if (id.includes('node_modules/vue')) {
+              return 'vue-core';
+            }
+            if (id.includes('node_modules/@fortawesome')) {
+              return 'fontawesome';
+            }
+            if (id.includes('node_modules/bootstrap')) {
+              return 'style';
+            }
+            if (id.includes('node_modules/moment') || id.includes('node_modules/axios')) {
+              return 'utils';
+            }
           },
         },
       },
