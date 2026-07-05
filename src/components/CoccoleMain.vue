@@ -58,6 +58,16 @@
               />
             </figure>
           </div>
+          <div class="col-md-6">
+            <figure>
+              <img
+                src="@/assets/images/schedule/202608.jpg"
+                class="img-responsive"
+                loading="lazy"
+                alt="営業カレンダー(8月)"
+              />
+            </figure>
+          </div>
         </div>
         <div class="row" style="align-content: center" />
       </div>

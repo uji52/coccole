@@ -5,7 +5,6 @@
     --privateKey ~/.ssh/keys/dev_web_key_prv.pem \
     --publicKeyId K1XIYOBOFWOZPO\
     --domain coccole-dev.uji52.com \
-    --ip 1.2.3.4/32 \
     --expires 86400
 
 出力: ブラウザにセットすべき `Set-Cookie` ヘッダを標準出力に出します。
