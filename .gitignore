@@ -3,6 +3,7 @@ node_modules
 /dist
 /dust
 /coverage
+/tmp
 
 # local env files
 .env.local

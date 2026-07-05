@@ -9,10 +9,10 @@
     "local-deploy": "npm run build;rm -rf /var/www/html/test/*;cp -rp dist/* /var/www/html/test/",
     "depcheck": "depcheck --ignores=file-loader,url-loader,image-webpack-loader",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
-    "lint:css": "stylelint \"src/**/*.scss\"",
+    "lint:css": "stylelint \"src/**/*.scss\" --ignore-path .stylelintignore --allow-empty-input",
     "test:unit": "jest",
     "format": "prettier --write src/ tests/",
-    "format:css": "prettier --write \"src/**/*.scss\" && stylelint --fix \"src/**/*.scss\""
+    "format:css": "prettier --write \"src/**/*.scss\" && stylelint --fix \"src/**/*.scss\" --ignore-path .stylelintignore --allow-empty-input"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",

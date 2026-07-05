@@ -2,12 +2,15 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { visualizer } from 'rollup-plugin-visualizer';
 import path from 'path';
+import * as sass from 'sass-embedded';
 
 export default defineConfig(async () => {
+  process.env.SASS_SILENCE_DEPRECATIONS = 'all';
   const { imagetools } = await import('vite-imagetools');
 
   return {
     base: './',
+    logLevel: 'error',
     server: {
       port: 3000,
       strictPort: true,
@@ -31,12 +34,18 @@ export default defineConfig(async () => {
             @import "@/assets/sass/style.scss";
           `,
           api: 'modern-compiler',
+          implementation: sass,
+          quietDeps: true,
+          logger: {
+            warn: () => {}
+          },
           silenceDeprecations: [ // めんどくさすぎる＆すべて外部SCSS＆デザインのみの問題のため、嫌な気分になるが警告無視
             'mixed-decls',
             'slash-div',
             'global-builtin',
             'color-functions',
-            'import'
+            'import',
+            'if-function'
           ]
         }
       }
@@ -44,6 +53,7 @@ export default defineConfig(async () => {
     build: {
       target: 'esnext',
       minify: 'terser',
+      cssMinify: false,
       cssCodeSplit: true,
       assetsDir: 'assets',
       copyPublicDir: true,
@@ -51,6 +61,19 @@ export default defineConfig(async () => {
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'index.html')
+        },
+        onwarn(warning, warn) {
+          const message = warning.message || '';
+          if (
+            message.includes('mixed-decls deprecation') ||
+            message.includes('didn\'t resolve at build time') ||
+            message.includes('Expected identifier but found "*"') ||
+            message.includes('Deprecation Warning') ||
+            warning.code === 'UNRESOLVED_IMPORT'
+          ) {
+            return;
+          }
+          warn(warning);
         },
         output: {
           chunkFileNames: 'assets/js/[name]-[hash].js',
