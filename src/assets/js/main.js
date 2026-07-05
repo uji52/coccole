@@ -122,7 +122,7 @@
         $(window).stellar()
       }
     } catch (error) {
-      console.warn('Parallax initialization skipped:', error)
+      // Ignore legacy parallax initialization issues in this environment.
     }
   }
 
