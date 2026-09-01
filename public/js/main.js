@@ -128,30 +128,18 @@
 
   // Burger Menu
   var burgerMenu = function () {
-    document
-      .querySelector('.js-fh5co-nav-toggle')
-      .addEventListener('click', (event) => {
-        document.body.classList.toggle('fh5co-overflow')
-        document.body.classList.toggle('offcanvas-visible')
-        this.classList.toggle('active')
-        event.preventDefault()
+    const toggleButton = document.querySelector('.js-fh5co-nav-toggle')
+    if (!toggleButton) {
+      console.error('Failed to initialize burger menu: toggle button not found')
+      return
+    }
 
-        try {
-          const toggleButton = document.querySelector('.js-fh5co-nav-toggle')
-          if (!toggleButton) {
-            throw new Error('Navigation toggle button not found')
-          }
-
-          toggleButton.addEventListener('click', function (event) {
-            document.body.classList.toggle('fh5co-overflow')
-            document.body.classList.toggle('offcanvas-visible')
-            this.classList.toggle('active')
-            event.preventDefault()
-          })
-        } catch (error) {
-          console.error('Failed to initialize burger menu:', error)
-        }
-      })
+    toggleButton.addEventListener('click', function (event) {
+      event.preventDefault()
+      document.body.classList.toggle('fh5co-overflow')
+      document.body.classList.toggle('offcanvas-visible')
+      this.classList.toggle('active')
+    })
   }
 
   var scrolledWindow = function () {
@@ -271,339 +259,43 @@
   }
 
   // Animations
-  var homeAnimate = function () {
-    if ($('#fh5co-home').length > 0) {
-      $('#fh5co-home').waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              $('#fh5co-home .to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
+  var staggerAnimate = function ($scope, selector, className, startDelay) {
+    setTimeout(function () {
+      $scope.find(selector).each(function (k) {
+        var el = $(this)
+        setTimeout(function () {
+          el.addClass(className)
+        }, k * 200)
+      })
+    }, startDelay)
   }
 
-  var aboutAnimate = function () {
-    var about = $('#fh5co-about')
-    if (about.length > 0) {
-      about.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              about.find('.to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            setTimeout(function () {
-              about.find('.to-animate-2').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeIn animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
+  var sectionAnimate = function (sectionSelector, primaryClass, secondary) {
+    var $section = $(sectionSelector)
+    if ($section.length === 0) {
+      return
     }
-  }
 
-  var sayingsAnimate = function () {
-    var sayings = $('#fh5co-sayings')
-    if (sayings.length > 0) {
-      sayings.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              sayings.find('.to-animate').each(function (k) {
-                var el = $(this)
+    $section.waypoint(
+      function (direction) {
+        if (direction !== 'down' || $(this.element).hasClass('animated')) {
+          return
+        }
 
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
+        staggerAnimate($section, '.to-animate', primaryClass, 200)
+        if (secondary) {
+          staggerAnimate(
+            $section,
+            '.to-animate-2',
+            secondary.className,
+            secondary.delay
+          )
+        }
 
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
-  }
-
-  var featureAnimate = function () {
-    var feature = $('#fh5co-featured')
-    if (feature.length > 0) {
-      feature.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              feature.find('.to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            setTimeout(function () {
-              feature.find('.to-animate-2').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('bounceIn animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 500)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
-  }
-
-  var typeAnimate = function () {
-    var type = $('#fh5co-type')
-    if (type.length > 0) {
-      type.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              type.find('.to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
-  }
-
-  var foodMenusAnimate = function () {
-    var menus = $('#fh5co-menus')
-    if (menus.length > 0) {
-      menus.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              menus.find('.to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            setTimeout(function () {
-              menus.find('.to-animate-2').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeIn animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 500)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
-  }
-
-  var eventsAnimate = function () {
-    var events = $('#fh5co-events')
-    if (events.length > 0) {
-      events.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              events.find('.to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeIn animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            setTimeout(function () {
-              events.find('.to-animate-2').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 500)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
-  }
-
-  var reservationAnimate = function () {
-    var contact = $('#fh5co-contact')
-    if (contact.length > 0) {
-      contact.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              contact.find('.to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeIn animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            setTimeout(function () {
-              contact.find('.to-animate-2').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 500)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
-  }
-
-  var footerAnimate = function () {
-    var footer = $('#fh5co-footer')
-    if (footer.length > 0) {
-      footer.waypoint(
-        function (direction) {
-          if (direction === 'down' && !$(this.element).hasClass('animated')) {
-            setTimeout(function () {
-              footer.find('.to-animate').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeIn animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 200)
-
-            setTimeout(function () {
-              footer.find('.to-animate-2').each(function (k) {
-                var el = $(this)
-
-                setTimeout(
-                  function () {
-                    el.addClass('fadeInUp animated')
-                  },
-                  k * 200,
-                  'easeInOutExpo'
-                )
-              })
-            }, 500)
-
-            $(this.element).addClass('animated')
-          }
-        },
-        { offset: '80%' }
-      )
-    }
+        $(this.element).addClass('animated')
+      },
+      { offset: '80%' }
+    )
   }
 
   // Document on load.
@@ -621,14 +313,32 @@
     goToTop()
 
     // Animations
-    homeAnimate()
-    aboutAnimate()
-    sayingsAnimate()
-    featureAnimate()
-    typeAnimate()
-    foodMenusAnimate()
-    eventsAnimate()
-    reservationAnimate()
-    footerAnimate()
+    sectionAnimate('#fh5co-home', 'fadeInUp animated', null)
+    sectionAnimate('#fh5co-about', 'fadeInUp animated', {
+      className: 'fadeIn animated',
+      delay: 200,
+    })
+    sectionAnimate('#fh5co-sayings', 'fadeInUp animated', null)
+    sectionAnimate('#fh5co-featured', 'fadeInUp animated', {
+      className: 'bounceIn animated',
+      delay: 500,
+    })
+    sectionAnimate('#fh5co-type', 'fadeInUp animated', null)
+    sectionAnimate('#fh5co-menus', 'fadeInUp animated', {
+      className: 'fadeIn animated',
+      delay: 500,
+    })
+    sectionAnimate('#fh5co-events', 'fadeIn animated', {
+      className: 'fadeInUp animated',
+      delay: 500,
+    })
+    sectionAnimate('#fh5co-contact', 'fadeIn animated', {
+      className: 'fadeInUp animated',
+      delay: 500,
+    })
+    sectionAnimate('#fh5co-footer', 'fadeIn animated', {
+      className: 'fadeInUp animated',
+      delay: 500,
+    })
   })
 })()

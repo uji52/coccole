@@ -22,19 +22,20 @@ const legacyScripts = [
   '/js/jquery.waypoints.min.js',
   '/js/jquery.flexslider-min.js',
   '/js/jquery.stellar.min.js',
-  '/js/main.js'
+  '/js/main.js',
 ];
 
-const loadScript = (src) => new Promise((resolve, reject) => {
-  const script = document.createElement('script');
-  script.src = src;
-  script.async = false;
-  script.onload = () => resolve();
-  script.onerror = () => reject(new Error(`Failed to load ${src}`));
-  document.head.appendChild(script);
-});
+const loadScript = (src) =>
+  new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error(`Failed to load ${src}`));
+    document.head.appendChild(script);
+  })
 
-(async () => {
+;(async () => {
   try {
     for (const src of legacyScripts) {
       await loadScript(src);
@@ -51,4 +52,3 @@ const loadScript = (src) => new Promise((resolve, reject) => {
     console.error('Failed to initialize application:', error);
   }
 })();
-
