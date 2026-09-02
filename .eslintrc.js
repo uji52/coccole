@@ -7,7 +7,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:vue/vue3-essential'
+    'plugin:vue/essential'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
