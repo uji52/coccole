@@ -47,6 +47,7 @@
 .flexslider {
   margin: 0;
   padding: 0;
+  touch-action: pan-y;
 }
 .flexslider .slides > li {
   display: none;
