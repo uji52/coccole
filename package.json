@@ -12,7 +12,9 @@
     "lint:css": "stylelint \"src/**/*.scss\" --ignore-path .stylelintignore --allow-empty-input",
     "test:unit": "jest",
     "format": "prettier --write src/ tests/",
-    "format:css": "prettier --write \"src/**/*.scss\" && stylelint --fix \"src/**/*.scss\" --ignore-path .stylelintignore --allow-empty-input"
+    "format:css": "prettier --write \"src/**/*.scss\" && stylelint --fix \"src/**/*.scss\" --ignore-path .stylelintignore --allow-empty-input",
+    "test": "npm run lint;npm run test:unit",
+    "review": "npm install;npm run test;npm run build;npm run serve"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
@@ -53,8 +55,8 @@
     "stylelint-config-recommended-scss": "^17.0.1",
     "stylelint-scss": "^7.2.0",
     "terser": "^5.50.0",
-    "vite": "^6.4.2",
-    "vite-imagetools": "^7.0.5",
+    "vite": "^8.2.2",
+    "vite-imagetools": "^12.0.1",
     "vite-plugin-compression": "^0.5.1"
   },
   "browserslist": [
