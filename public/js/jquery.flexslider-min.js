@@ -402,7 +402,7 @@
           function e(e) {
             ;(e.stopPropagation(),
               n.animating
-                ? e.preventDefault()
+                ? (e.cancelable && e.preventDefault())
                 : (n.pause(),
                   t._gesture.addPointer(e.pointerId),
                   (w = 0),
@@ -442,7 +442,7 @@
                   t._gesture.stop()
                 })
               ;(!x || Number(new Date()) - f > 500) &&
-                (e.preventDefault(),
+                (e.cancelable && e.preventDefault(),
                 !p &&
                   a.transitions &&
                   (a.vars.animationLoop ||
@@ -533,7 +533,7 @@
                     : Math.abs(m) < Math.abs(b - o)))
                 var t = 500
                 ;(!x || Number(new Date()) - f > 500) &&
-                  (e.preventDefault(),
+                  (e.cancelable && e.preventDefault(),
                   !p &&
                     n.transitions &&
                     (n.vars.animationLoop ||

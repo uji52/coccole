@@ -22,7 +22,7 @@ export default defineConfig(async () => {
     ].filter(Boolean),
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src'),
+        '@': path.resolve(import.meta.dirname, 'src'),
       },
     },
     css: {
@@ -59,7 +59,7 @@ export default defineConfig(async () => {
       outDir: 'dist',
       rollupOptions: {
         input: {
-          main: path.resolve(__dirname, 'index.html')
+          main: path.resolve(import.meta.dirname, 'index.html')
         },
         onwarn(warning, warn) {
           const message = warning.message || '';
