@@ -1,7 +1,0 @@
-src/assets/**
-public/assets/**
-public/js/**
-dist/
-coverage/
-node_modules/
-.git/
