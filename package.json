@@ -64,5 +64,10 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "overrides": {
+    "@vue/vue3-jest": {
+      "jest": "$jest"
+    }
+  }
 }
