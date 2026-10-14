@@ -51,30 +51,30 @@
           <div class="col-md-4">
             <figure>
               <img
-                src="@/assets/images/schedule/202608.jpg"
-                class="img-responsive"
-                loading="lazy"
-                alt="営業カレンダー(8月)"
-              />
-            </figure>
-          </div>
-          <div class="col-md-4">
-            <figure>
-              <img
-                src="@/assets/images/schedule/202609.jpg"
-                class="img-responsive"
-                loading="lazy"
-                alt="営業カレンダー(9月)"
-              />
-            </figure>
-          </div>
-          <div class="col-md-4">
-            <figure>
-              <img
                 src="@/assets/images/schedule/202610.jpg"
                 class="img-responsive"
                 loading="lazy"
                 alt="営業カレンダー(10月)"
+              />
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure>
+              <img
+                src="@/assets/images/schedule/202611.jpg"
+                class="img-responsive"
+                loading="lazy"
+                alt="営業カレンダー(11月)"
+              />
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure>
+              <img
+                src="@/assets/images/schedule/202612.jpg"
+                class="img-responsive"
+                loading="lazy"
+                alt="営業カレンダー(12月)"
               />
             </figure>
           </div>
